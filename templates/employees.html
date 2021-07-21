@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smarty</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block content %}
+    <h2>bitch</h2>
     {% for employee in employees %}
         {{ employee.management_department }}<br>
         {{ employee.management_employee }}<br>
         {{ employee.management_phone }}<br>
     {% endfor %}
-</body>
-</html>
+{% endblock %}
