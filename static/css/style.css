@@ -6,3 +6,24 @@
     color: #fff;
     text-transform: uppercase;
 }
+
+.logo-sidenav {
+    color: #424242;
+    letter-spacing: 2px;
+}
+
+.btn-signup-login {
+    width: 20%;
+    margin-left: 5%;
+    margin-top: 5%;
+    border-radius: 20px;
+    background-color: #f57c00;
+}
+
+.input-field {
+    border-color: chocolate;
+}
+
+.input-field {
+    color: #fff;
+}

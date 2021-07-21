@@ -15,33 +15,35 @@
     <title>Smarty</title>
 </head>
 
-<body>
+<body class="grey darken-3">
     <header>
         <!-- Main Navbar -->
         <nav class="nav-extended orange darken-2">
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo">SMARTY</a>
+                <a href="{{ url_for('get_employees') }}" class="brand-logo">SMARTY</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="{{ url_for('get_employees') }}">Home</a></li>
                     <li><a href="#">Profile</a></li>
                     <li><a href="#">New Employee</a></li>
                     <li><a href="#">Departments</a></li>
                     <li><a href="#">Log out</a></li>
                     <li><a href="#">Log in</a></li>
-                    <li><a href="#">Sign up</a></li>
+                    <li><a href="{{ url_for('register') }}">Sign up</a></li>
                 </ul>
             </div>
         </nav>
         <!-- Sidenav for phones -->
         <ul class="sidenav deep-orange lighten-2" id="mobile-demo">
-            <li><a href="#">Home</a></li>
+            <li><h4 class="center-align logo-sidenav">SMARTY</h4></li>
+            <hr class="divider">
+            <li><a href="{{ url_for('get_employees') }}">Home</a></li>
             <li><a href="#">Profile</a></li>
             <li><a href="#">New Employee</a></li>
             <li><a href="#">Departments</a></li>
             <li><a href="#">Log out</a></li>
             <li><a href="#">Log in</a></li>
-            <li><a href="#">Sign up</a></li>
+            <li><a href="{{ url_for('register') }}">Sign up</a></li>
         </ul>
     </header>
     {% block content %}
