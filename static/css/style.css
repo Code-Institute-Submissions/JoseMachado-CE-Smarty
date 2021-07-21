@@ -1,3 +1,8 @@
-body {
-    background-color: aqua;
+.brand-logo {
+    margin-left: 5%;
+}
+
+.sidenav li a {
+    color: #fff;
+    text-transform: uppercase;
 }
