@@ -51,14 +51,15 @@
     </header>
 
     <div class="container">
-        {% with messages = get_flashed_messages() %}
+        {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
-                {% for message in messages %}
+                {% for category, message in messages %}
                     <div class="row">
                         <div class="col s12 m6">
-                            <div class="card green lighten-4">
+                            <div class="card {{ category }}">
                                 <div class="card-content white-text">
-                                    <p> {{ message }} </p>
+                                    <span class="card-title">Card Title</span>
+                                    <p> {{ message }}</p>
                                 </div>
                             </div>
                         </div>

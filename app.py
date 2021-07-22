@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_employees")
 def get_employees():
-    employees = mongo.db.employees.find()
+    employees = mongo.db.tasks.find()
     return render_template("employees.html", employees=employees)
 
 
@@ -33,17 +33,21 @@ def register():
             {"username": request.form.get("username").lower()})
 
         if existing_user:
-            flash("Username already exists")
+            flash("Username already exists", "danger")
             return redirect(url_for("register"))
 
         register = {
             "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get("password"))
+            "password": generate_password_hash(request.form.get("password")),
+            "email": request.form.get("email").lower()
         }
         mongo.db.users.insert_one(register)
 
+        # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
-        flash("Registration Successful!")
+        flash("Registration Successful!", "success")
+        return redirect(url_for("register"))
+        
     return render_template("register.html")
 
 

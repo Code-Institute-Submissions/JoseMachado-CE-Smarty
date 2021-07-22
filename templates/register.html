@@ -1,33 +1,50 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class="container contact">
-        <div class="row">
-            <div class="col">
-                <h1 class="contact-title">Register</h1>
-                <p class="lead">Don't wast no time. Get in touch with us to know what is the new release.
-                </p>
-            </div>
+<div class="container contact">
+    <div class="row">
+        <div class="col">
+            <h1 class="contact-title">Register</h1>
+            <p class="lead">Don't wast no time. Get in touch with us to know what is the new release.
+            </p>
         </div>
-        <form id='form' method="POST" action="{{ url_for('register') }}">
-            <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
-                <input type="text" name="username" class="form-control" id="username" required>
-            </div>
-            <div class="mb-3">
-                <label for="password">Password</label>
-                <input id="password" name="password" type="password" class="validate" required>
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email address</label>
-                <input type="text" name="email" class="form-control" id="email" required>
-                
-            </div>
-        </form>
-        <div>
-            <button id="newsletterform" onclick="sendMail()" type="submit" class="btn btn-contact">Submit</button>
-        </div>
-        <div class="text-response"></div>
     </div>
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
+        <div class="card-panel">
+            <!-- username -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-user-plus prefix light-blue-text text-darken-4"></i>
+                    <input id="username" name="username" type="text" minlength="5" maxlength="15"
+                        pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    <label for="username">Username</label>
+                </div>
+            </div>
+            <!-- passowrd -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-lock-open prefix light-blue-text text-darken-4"></i>
+                    <input id="password" name="password" type="password" minlength="5" maxlength="15"
+                        pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    <label for="password">Password</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-envelope-open-text prefix light-blue-text text-darken-4"></i>
+                    <input id="email" name="email" type="email" class="validate" required>
+                    <label for="email">Email</label>
+                </div>
+            </div>
+            <!-- register -->
+            <div class="row">
+                <button type="submit" class="col s12 btn-large light-blue darken-4 text-shadow">
+                    Register <i class="fas fa-sign-in-alt"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+
+</div>
 
 
 
