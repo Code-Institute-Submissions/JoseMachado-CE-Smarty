@@ -29,7 +29,7 @@
                     <li><a href="#">New Employee</a></li>
                     <li><a href="#">Departments</a></li>
                     <li><a href="#">Log out</a></li>
-                    <li><a href="#">Log in</a></li>
+                    <li><a href="{{ url_for('login') }}">Log in</a></li>
                     <li><a href="{{ url_for('register') }}">Sign up</a></li>
                 </ul>
             </div>
@@ -45,28 +45,34 @@
             <li><a href="#">New Employee</a></li>
             <li><a href="#">Departments</a></li>
             <li><a href="#">Log out</a></li>
-            <li><a href="#">Log in</a></li>
+            <li><a href="{{ url_for('login') }}">Log in</a></li>
             <li><a href="{{ url_for('register') }}">Sign up</a></li>
         </ul>
     </header>
 
     <div class="container">
-        {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
+
+
+        <div class="row">
+            <div class="col-sm-6">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
                 {% for category, message in messages %}
-                    <div class="row">
-                        <div class="col s12 m6">
-                            <div class="card {{ category }}">
-                                <div class="card-content white-text">
-                                    <span class="card-title">Card Title</span>
-                                    <p> {{ message }}</p>
-                                </div>
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="card {{ category }}">
+                            <div class="card-content white-text">
+                                <span class="card-title">Card Title</span>
+                                <p> {{ message }}</p>
                             </div>
                         </div>
                     </div>
+                </div>
                 {% endfor %}
-            {% endif %}
-        {% endwith %}
+                {% endif %}
+                {% endwith %}
+            </div>  
+        </div>
     </div>
 
     <main>
