@@ -24,3 +24,18 @@
     background-color: darkcyan;
     height: auto;
 }
+
+.contact {
+    background-color: #fff;
+    display: block;
+    min-height: 500px;
+    width: 60%;
+    margin-left: 20%;
+    border: 12px solid #f57c00;
+    border-radius: 5px;
+    margin-bottom: 15%;
+    margin-top: 5%;
+    padding: 10px;
+    color: #f57c00;
+}
+
