@@ -51,7 +51,6 @@
     color: #f57c00;
 }
 
-.solid-border {
-    border: solid 1px orange;
-    padding: 2px;
+.documents-title {
+    margin-bottom: 5%;
 }
