@@ -2,14 +2,15 @@
 {% block content %}
 <div class="container">
     <div class="row card-panel grey lighten-4">
-        <div class="col s8">
+        <div class="col s12">
             <ul class="tabs orange darken-2">
-                <li class="tab col s3"><a class="active white-text" href="#personal">Personal</a></li>
-                <li class="tab col s3"><a class="white-text" href="#documents">Documents</a></li>
+                <li class="tab col s6"><a class="active white-text" href="#personal">Personal</a></li>
+                <li class="tab col s6"><a class="white-text" href="#documents">Documents</a></li>
             </ul>
         </div>
         <div id="personal" class="col s12">
-            <h3 class="orange-text text-darken-2 documents-title"><span><i class="fas fa-user-lock orange-text text-darken-2"></i> Personal</span></h3>
+            <h3 class="orange-text text-darken-2 documents-title"><span><i
+                        class="fas fa-user-lock orange-text text-darken-2"></i> Personal</span></h3>
             <div class="row">
                 <form class="col s12" method="POST" action="">
                     <div class="row">
@@ -18,38 +19,57 @@
                             <input id="icon_prefix" type="text" class="validate">
                             <label for="icon_prefix">Employee Name</label>
                         </div>
+                    </div>
+                    <div class="row">
 
                         <div class="input-field col s12">
                             <i class="fas fa-phone-volume prefix orange-text text-darken-2"></i>
                             <input id="icon_telephone" type="tel" class="validate">
                             <label for="icon_telephone">Telephone</label>
                         </div>
+                    </div>
+                    <div class="row">
                         <div class="input-field col s12">
-                            <i class="fas fa-building prefix orange-text text-darken-2"></i>
-                            <input id="icon_department" type="tel" class="validate">
-                            <label for="icon_department">Department</label>
+                            <i class="far fa-building prefix orange-text text-darken-2"></i>
+                            <select id="management_department" name="management_department" class="validate" required>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                            <label>Department</label>
                         </div>
+                    </div>
+                    <div class="row">
                         <div class="input-field col s12">
                             <i class="fas fa-table prefix orange-text text-darken-2"></i>
-                            <input id="icon_start" type="tel" class="validate">
+                            <input id="icon_start" type="tel" class="datepicker validate">
                             <label for="icon_start">Start Date</label>
                         </div>
+                    </div>
+                    <div class="row">
                         <div class="input-field col s12">
                             <i class="fas fa-envelope-square prefix orange-text text-darken-2"></i>
                             <input id="icon_email" type="tel" class="validate">
-                            <label for="icon_email">Start Date</label>
+                            <label for="icon_email">Email</label>
                         </div>
+                    </div>
+                    <div class="row">
                         <div class="input-field col s12">
-                            <i class="fas fa-info prefix orange-text text-darken-2"></i>
-                            <input id="icon_status" type="tel" class="validate">
-                            <label for="icon_status">Status</label>
+                            <div class="switch">
+                                <i class="fas fa-info prefix orange-text text-darken-2"></i>
+                                <label for="is_urgent">
+                                    <input type="checkbox" id="is_urgent" name="is_urgent">
+                                    <span class="lever"></span>
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
         <div id="documents" class="col s12">
-            <h3 class="orange-text text-darken-2 documents-title"><span><i class="fas fa-file orange-text text-darken-2"></i> Documents</span></h3>
+            <h3 class="orange-text text-darken-2 documents-title"><span><i
+                        class="fas fa-file orange-text text-darken-2"></i> Documents</span></h3>
             <form action="#">
                 <div class="file-field input-field">
                     <div class="btn orange darken-2">
