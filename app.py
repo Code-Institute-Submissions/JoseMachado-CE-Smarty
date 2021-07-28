@@ -94,7 +94,8 @@ def logout():
 
 @app.route('/add_employee')
 def add_employee():
-    return render_template('add_employee.html')
+    management = mongo.db.management.find().sort("management_department", 1)
+    return render_template('add_employee.html', management=management)
 
 
 if __name__ == "__main__":

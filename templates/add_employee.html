@@ -32,11 +32,11 @@
                         <div class="input-field col s12">
                             <i class="far fa-building prefix orange-text text-darken-2"></i>
                             <select id="management_department" name="management_department" class="validate" required>
-                                <option value="1">Option 1</option>
-                                <option value="2">Option 2</option>
-                                <option value="3">Option 3</option>
+                                {% for department in management %}
+                                    <option value="{{ department.management_department }}">{{ department.management_department }}</option>
+                                {% endfor %}
                             </select>
-                            <label>Department</label>
+                            <label for="management_department">Department</label>
                         </div>
                     </div>
                     <div class="row">
