@@ -77,3 +77,8 @@
 #employee-title {
     text-transform: uppercase;
 }
+
+a:hover {
+    background-color: #ff9e80;
+    color: black;
+}

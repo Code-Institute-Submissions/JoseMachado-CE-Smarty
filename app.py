@@ -112,6 +112,13 @@ def add_employee():
     return render_template('add_employee.html', management=management)
 
 
+@app.route('/edit_employee/<employee_id>', methods=['GET', 'POST'])
+def edit_employee(employee_id):
+    employee = mongo.db.employees.find_one({"_id": ObjectId(employee_id)})
+    management = mongo.db.management.find().sort("management_department", 1)
+    return render_template('edit_employee.html', employee= employee,management=management)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
