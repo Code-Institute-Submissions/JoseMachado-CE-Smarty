@@ -16,7 +16,7 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="fas fa-user-circle prefix orange-text text-darken-2"></i>
-                            <input id="management_employee" name="management_employee" type="text" class="validate">
+                            <input id="management_employee" name="management_employee" type="text" class="validate" required>
                             <label for="management_employee"></label>
                             <span class="helper-text">Employee Name</span>
                         </div>
@@ -24,7 +24,7 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="fas fa-mobile prefix orange-text text-darken-2"></i>
-                            <input name="management_phone" id="management_phone" class="validate">
+                            <input name="management_phone" id="management_phone" class="validate" type="number" required>
                             <label for="management_phone"></label>
                             <span class="helper-text">Phone</span>
                         </div>
@@ -44,7 +44,7 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="fas fa-table prefix orange-text text-darken-2"></i>
-                            <input id="management_start_day" name="management_start_day" class="datepicker validate">
+                            <input id="management_start_day" name="management_start_day" class="datepicker validate" type="text" required>
                             <label for="management_start_day"></label>
                             <span class="helper-text">Start Date</span>
                         </div>
@@ -52,7 +52,7 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="fas fa-envelope-square prefix orange-text text-darken-2"></i>
-                            <input id="management_email" name="management_email" class="validate">
+                            <input id="management_email" name="management_email" class="validate" type="email" required>
                             <label for="management_email"></label>
                             <span class="helper-text">Email</span>
                         </div>
@@ -62,7 +62,7 @@
                             <div class="switch">
                                 <i class="fas fa-info prefix orange-text text-darken-2"></i>
                                 <label for="management_is_urgent">
-                                    <input type="checkbox" id="management_is_urgent" name="management_is_urgent">
+                                    <input type="checkbox" id="management_is_urgent" name="management_is_urgent" required>
                                     <span class="lever"></span>
                                 </label>
                             </div>
