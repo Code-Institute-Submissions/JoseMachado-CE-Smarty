@@ -102,7 +102,7 @@ def add_employee():
             "management_start_day": request.form.get("management_start_day"),
             "management_phone": request.form.get("management_phone"),
             "management_email": request.form.get("management_email"),
-            "created_by": session["user"]
+            "management_manager": session["user"]
         }
         mongo.db.employees.insert_one(employee)
 
