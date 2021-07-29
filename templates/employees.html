@@ -16,31 +16,33 @@
             </div>
             <div class="collapsible-body card-panel">
                 <div class="row">
-                    <div class="input-field col s12">
-                        <i class="fas fa-user prefix orange-text text-darken-2"></i>
-                        <p>asdas</p>
-                        <label for="management_email black-text">{{employee.management_department }}</label>
+                    <div class="input-field col s12 list-group">
+                        <i class="fas fa-building prefix orange-text text-darken-2"></i>
+                        <label class="black-text" for="management_email black-text">{{employee.management_department }}</label>
+                        <span class="helper-text">Deparment</span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <i class="fas fa-user prefix orange-text text-darken-2"></i>
-                        <label for="management_email">{{employee.management_start_day }}</label>
+                        <i class="fas fa-table prefix orange-text text-darken-2"></i>
+                        <label class="black-text" for="management_email"> {{employee.management_start_day }}</label>
+                        <span class="helper-text">Start date</span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <i class="fas fa-user prefix orange-text text-darken-2"></i>
-                        <label for="management_email">{{employee.management_phone }}</label>
+                        <i class="fas fa-mobile prefix orange-text text-darken-2"></i>
+                        <label class="black-text"for="management_email"> {{employee.management_phone }}</label>
+                        <span class="helper-text">Phone</span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <i class="fas fa-user prefix orange-text text-darken-2"></i>
-                        <label for="management_email">{{employee.management_email}}</label>
+                        <i class="fas fa-envelope-square prefix orange-text text-darken-2"></i>
+                        <label class="black-text" for="management_email"> {{employee.management_email}}</label>
+                        <span class="helper-text">Email</span>
                     </div>
                 </div>
-
             </div>
         </li>
         {% endfor %}
