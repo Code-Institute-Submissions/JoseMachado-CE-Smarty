@@ -12,7 +12,7 @@
             <h3 class="orange-text text-darken-2 documents-title"><span><i
                         class="fas fa-user-lock orange-text text-darken-2"></i> Personal</span></h3>
             <div class="row">
-                <form class="col s12" method="POST" action="">
+                <form class="col s12" method="POST" action="{{ url_for('add_employee') }}">
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="fas fa-user-circle prefix orange-text text-darken-2"></i>
@@ -21,11 +21,10 @@
                         </div>
                     </div>
                     <div class="row">
-
                         <div class="input-field col s12">
-                            <i class="fas fa-phone-volume prefix orange-text text-darken-2"></i>
-                            <input id="icon_telephone" name="icon_telephone" class="validate">
-                            <label for="icon_telephone">Telephone</label>
+                            <i class="fas fa-user-circle prefix orange-text text-darken-2"></i>
+                            <input name="disabled" id="disabled" type="text" class="validate">
+                            <label for="disabled">Phone</label>
                         </div>
                     </div>
                     <div class="row">
@@ -49,8 +48,8 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="fas fa-envelope-square prefix orange-text text-darken-2"></i>
-                            <input id="icon_email" name="icon_email" class="validate">
-                            <label for="icon_email">Email</label>
+                            <input id="email" name="email" type="email" class="validate">
+                            <label for="email">Email</label>
                         </div>
                     </div>
                     <div class="row">
@@ -62,6 +61,12 @@
                                     <span class="lever"></span>
                                 </label>
                             </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s2 center-align">
+                            <button class="btn btn-large orange darken-2 button-form" type="submit" name="action">Submit
+                            </button>
                         </div>
                     </div>
                 </form>
