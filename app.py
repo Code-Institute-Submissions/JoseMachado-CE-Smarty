@@ -75,7 +75,6 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     
@@ -92,8 +91,24 @@ def logout():
     return redirect(url_for('login'))
 
 
-@app.route('/add_employee')
+@app.route("/add_employee", methods=["GET", "POST"])
 def add_employee():
+    if request.method == "POST":
+        management_is_urgent = "on" if request.form.get("management_is_urgent") else "off"
+        employee = {
+            "management_employee": request.form.get("management_employee"),
+            "management_department": request.form.get("management_department"),
+            "task_description": request.form.get("task_description"),
+            "management_is_urgent": management_is_urgent,
+            "management_start_day": request.form.get("management_start_day"),
+            "management_phone": request.form.get("management_phone"),
+            "management_email": request.form.get("management_email"),
+            "created_by": session["user"]
+        }
+        mongo.db.employees.insert_one(employee)
+
+        return redirect(url_for("get_employees"))
+
     management = mongo.db.management.find().sort("management_department", 1)
     return render_template('add_employee.html', management=management)
 
