@@ -1,20 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container">
-    <h2>bitch</h2>
-    <!--{% for employee in employees %}
-    {{ employee.management_department }}<br>
-    {{ employee.management_employee }}<br>
-    {{ employee.management_phone }}<br>
-    {% endfor %}-->
+    <div class="employee-main-title">
+        <h2 id="employee-title" class="center-align white-text">Employees</h2>
+    </div>
 
     <ul class="collapsible ">
         {% for employee in employees %}
         <li>
             <div class="collapsible-header orange darken-2">
                 <div class="col s3" style="justify-content: center;">
-                    <a class="waves-effect waves-light btn btn-little">Edit</a>
-                    <a class="waves-effect waves-light btn btn-little">Check</a>
+                    <a class="brown btn btn-little">Edit</a>
+                    <a class="brown btn btn-little">Check</a>
                 </div>
                 <div class="col s9 tilte-employee">
                     <i class="fas fa-address-card white-text"></i>

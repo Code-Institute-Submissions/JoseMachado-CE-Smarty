@@ -70,3 +70,10 @@
     margin-left: 15px;
 }
 
+.employee-main-title {
+    border: 10px solid #f57c00;
+}
+
+#employee-title {
+    text-transform: uppercase;
+}
