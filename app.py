@@ -98,7 +98,6 @@ def add_employee():
         employee = {
             "management_employee": request.form.get("management_employee"),
             "management_department": request.form.get("management_department"),
-            "task_description": request.form.get("task_description"),
             "management_is_urgent": management_is_urgent,
             "management_start_day": request.form.get("management_start_day"),
             "management_phone": request.form.get("management_phone"),

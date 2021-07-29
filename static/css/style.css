@@ -51,6 +51,12 @@
     color: #f57c00;
 }
 
+.border-form {
+    border:solid 2px orange;
+    padding: 4px;
+    margin-bottom: 10%;
+}
+
 .documents-title {
     margin-bottom: 5%;
 }
