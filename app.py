@@ -140,6 +140,12 @@ def delete_employee(employee_id):
     mongo.db.employees.remove({"_id": ObjectId(employee_id)})
 
     return redirect(url_for("get_employees"))
+    flash('You have deleted {{ username }}', 'logout-flash')
+
+
+@app.route("/upload_image", methods=["GET", "POST"])
+def upload_image():
+    
 
 
 if __name__ == "__main__":

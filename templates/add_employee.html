@@ -58,6 +58,21 @@
                         </div>
                     </div>
                     <div class="row">
+                        <form action="{{ url_for('add_employee') }}" method="POST" enctype="multipart/form-data">
+                            <div class="input-field file-field input-field col s12">
+                                <button class="btn orange darken-2" type="submit">
+                                    <i class="fas fa-file-upload">
+                                        <input type="file" name="image" id="image" multiple>
+                                        
+                                    </i> Upload
+                                </button>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text" placeholder="Upload your Photo here">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="row">
                         <div class="input-field col s12">
                             <div class="switch">
                                 <i class="fas fa-info prefix orange-text text-darken-2"></i>
