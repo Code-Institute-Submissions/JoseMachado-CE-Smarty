@@ -114,9 +114,32 @@ def add_employee():
 
 @app.route('/edit_employee/<employee_id>', methods=['GET', 'POST'])
 def edit_employee(employee_id):
+
+    if request.method == "POST":
+        management_is_urgent = "on" if request.form.get("management_is_urgent") else "off"
+        employee_edit = {
+            "management_employee": request.form.get("management_employee"),
+            "management_department": request.form.get("management_department"),
+            "management_is_urgent": management_is_urgent,
+            "management_start_day": request.form.get("management_start_day"),
+            "management_phone": request.form.get("management_phone"),
+            "management_email": request.form.get("management_email"),
+            "management_manager": session["user"]
+        }
+        mongo.db.employees.update({"_id": ObjectId(employee_id)}, employee_edit)
+        return redirect(url_for("get_employees"))
+
+    
     employee = mongo.db.employees.find_one({"_id": ObjectId(employee_id)})
     management = mongo.db.management.find().sort("management_department", 1)
-    return render_template('edit_employee.html', employee= employee,management=management)
+    return render_template('edit_employee.html', employee=employee, management=management)
+
+
+@app.route("/delete_employee/<employee_id>")
+def delete_employee(employee_id):
+    mongo.db.employees.remove({"_id": ObjectId(employee_id)})
+
+    return redirect(url_for("get_employees"))
 
 
 if __name__ == "__main__":
