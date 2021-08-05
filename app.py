@@ -143,10 +143,12 @@ def delete_employee(employee_id):
     flash('You have deleted {{ username }}', 'logout-flash')
 
 
-@app.route("/upload_image", methods=["GET", "POST"])
-def upload_image():
-    
+@app.route("/get_departments")
+def get_departments():
+    departments = list(mongo.db.management.find().sort("management_department", 1))
+    return render_template("departments.html", departments=departments)
 
+    
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
