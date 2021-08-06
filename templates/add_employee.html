@@ -13,28 +13,34 @@
                         class="fas fa-user-lock orange-text text-darken-2"></i> Personal</span></h3>
             <div class="row">
                 <form class="col s12" method="POST" action="{{ url_for('add_employee') }}">
+                    <!-- category selection -->
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="fas fa-user-circle prefix orange-text text-darken-2"></i>
-                            <input id="management_employee" name="management_employee" type="text" class="validate" required>
+                            <input id="management_employee" name="management_employee" type="text" class="validate"
+                                required>
                             <label for="management_employee"></label>
                             <span class="helper-text">Employee Name</span>
                         </div>
                     </div>
+                    <!-- task name -->
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="fas fa-mobile prefix orange-text text-darken-2"></i>
-                            <input name="management_phone" id="management_phone" class="validate" type="number" required>
+                            <input name="management_phone" id="management_phone" class="validate" type="number"
+                                required>
                             <label for="management_phone"></label>
                             <span class="helper-text">Phone</span>
                         </div>
                     </div>
+                    <!-- task description -->
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="far fa-building prefix orange-text text-darken-2"></i>
                             <select id="management_department" name="management_department" class="validate" required>
                                 {% for department in management %}
-                                    <option value="{{ department.management_department }}">{{ department.management_department }}</option>
+                                <option value="{{ department.management_department }}">
+                                    {{- department.management_department -}}</option>
                                 {% endfor %}
                             </select>
                             <label for="management_department"></label>
@@ -44,7 +50,8 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="fas fa-table prefix orange-text text-darken-2"></i>
-                            <input id="management_start_day" name="management_start_day" class="datepicker validate" type="text" required>
+                            <input id="management_start_day" name="management_start_day" class="datepicker validate"
+                                type="text" required>
                             <label for="management_start_day"></label>
                             <span class="helper-text">Start Date</span>
                         </div>
@@ -57,32 +64,21 @@
                             <span class="helper-text">Email</span>
                         </div>
                     </div>
-                    <div class="row">
-                        <form action="{{ url_for('add_employee') }}" method="POST" enctype="multipart/form-data">
-                            <div class="input-field file-field input-field col s12">
-                                <button class="btn orange darken-2" type="submit">
-                                    <i class="fas fa-file-upload">
-                                        <input type="file" name="image" id="image" multiple>
-                                        
-                                    </i> Upload
-                                </button>
-                                <div class="file-path-wrapper">
-                                    <input class="file-path validate" type="text" placeholder="Upload your Photo here">
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+
+                    <!-- is urgent toggle -->
                     <div class="row">
                         <div class="input-field col s12">
                             <div class="switch">
-                                <i class="fas fa-info prefix orange-text text-darken-2"></i>
-                                <label for="management_is_urgent">
-                                    <input type="checkbox" id="management_is_urgent" name="management_is_urgent" required>
+                                <i class="fas fa-exclamation-circle prefix light-blue-text text-darken-4"></i>
+                                <label for="is_urgent">
+                                    <input type="checkbox" id="is_urgent" name="is_urgent">
                                     <span class="lever"></span>
+                                    Is Urgent
                                 </label>
                             </div>
                         </div>
                     </div>
+                    <!-- submit button -->
                     <div class="row">
                         <div class="col s2 center-align">
                             <button class="btn btn-large orange darken-2 button-form" type="submit" name="action">Submit
@@ -131,5 +127,7 @@
         </div>
     </div>
 </div>
+
+
 
 {% endblock %}

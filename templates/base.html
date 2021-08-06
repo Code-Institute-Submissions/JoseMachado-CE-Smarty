@@ -24,7 +24,8 @@
                 <a href="{{ url_for('get_employees') }}" class="brand-logo">SMARTY</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="{{ url_for('get_employees') }}">Home</a></li>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('get_employees') }}">Find Employee</a></li>
                     {% if session.user %}
                         <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                         <li><a href="{{ url_for('add_employee') }}">New Employee</a></li>
@@ -45,7 +46,7 @@
                 <h4 class="center-align logo-sidenav">SMARTY</h4>
             </li>
             <hr class="divider">
-            <li><a href="{{ url_for('get_employees') }}">Home</a></li>
+            <li><a href="{{ url_for('get_employees') }}">Find Employee</a></li>
             {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                 <li><a href="{{ url_for('add_employee') }}">New Employee</a></li>
