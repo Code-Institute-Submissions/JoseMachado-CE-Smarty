@@ -14,11 +14,16 @@ app = Flask(__name__)
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = -1
 
 mongo = PyMongo(app)
 
 
 @app.route("/")
+def home():
+    return render_template("home.html")
+
+
 @app.route("/get_employees")
 def get_employees():
     employees = list(mongo.db.employees.find())
