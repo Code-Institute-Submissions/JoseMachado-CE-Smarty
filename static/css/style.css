@@ -78,4 +78,38 @@
     text-transform: uppercase;
 }
 
+#col-home {
+    position: absolute;
+}
+
+#row-home {
+    position: relative;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.title-box {
+    margin-bottom: 30%;
+    background: rgba(1, 0, 3, 0.4);
+    width: 60%;
+    text-decoration: uppercase;    
+}
+
+.title-main{
+    text-transform: uppercase;
+}
+
+
+.callout img {
+    width: 100%;
+    margin-top: 0;
+   
+}
+
+
+
+
 
