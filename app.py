@@ -8,13 +8,13 @@ from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
 
-
 app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = -1
+
 
 mongo = PyMongo(app)
 
@@ -89,6 +89,7 @@ def profile(username):
     return redirect(url_for('login'))
 
 
+
 @app.route('/logout')
 def logout():
     flash('You have logged out', 'logout-flash')
@@ -107,7 +108,9 @@ def add_employee():
             "management_start_day": request.form.get("management_start_day"),
             "management_phone": request.form.get("management_phone"),
             "management_email": request.form.get("management_email"),
-            "management_manager": session["user"]
+            "management_manager": session["user"],
+            "management_media": session["management_media"]
+            
         }
         mongo.db.employees.insert_one(employee)
 
@@ -129,7 +132,8 @@ def edit_employee(employee_id):
             "management_start_day": request.form.get("management_start_day"),
             "management_phone": request.form.get("management_phone"),
             "management_email": request.form.get("management_email"),
-            "management_manager": session["user"]
+            "management_manager": session["user"],
+            "management_media": session["management_media"]
         }
         mongo.db.employees.update({"_id": ObjectId(employee_id)}, employee_edit)
         return redirect(url_for("get_employees"))
@@ -153,9 +157,35 @@ def get_departments():
     departments = list(mongo.db.management.find().sort("management_department", 1))
     return render_template("departments.html", departments=departments)
 
-    
+
+@app.route('/', methods=['POST'])
+def upload_image():
+    if 'file' not in request.files:
+        flash('No file part')
+        return redirect(request.url)
+    file = request.files['file']
+    if file.filename == '':
+        flash('No image selected for uploading')
+        return redirect(request.url)
+    if file and allowed_file(file.filename):
+        filename = secure_filename(file.filename)
+        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        #print('upload_image filename: ' + filename)
+        flash('Image successfully uploaded and displayed below')
+        return render_template('profile.html', filename=filename)
+    else:
+        flash('Allowed image types are - png, jpg, jpeg, gif')
+        return redirect(request.url)
+ 
+
+@app.route('/display/<filename>')
+def display_image(filename):
+    #print('display_image filename: ' + filename)
+    return redirect(url_for('static', filename='uploads/' + filename), code=301)
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
             debug=True)
+            

@@ -1,19 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="section no-pad-bot orange lighten-5" id="index-banner">
-    <div class="container">
-        <br><br>
-        <h1 class="header center  orange-text text-darken-3">Welcome {{ username }}</h1>
-        <div class="row center">
-            <h5 class="header col s12 light">This app is more than happy to help you. Click below to manage your employees</h5>
+<div class="col s12 m8 offset-m2 l6 offset-l3">
+    <div class="card-panel grey lighten-5 z-depth-1">
+      <div class="row valign-wrapper">
+        <div class="col s2">
+          <img src="" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
         </div>
-        <div class="row center">
-            <a href="{{ url_for('add_employee') }}" class="btn-large waves-effect waves-light orange darken-3">Add employee</a>
+        <div class="col s10">
+          <span class="black-text">
+            This is a square image. Add the "circle" class to it to make it appear circular.
+          </span>
         </div>
-        <br><br>
-
+      </div>
     </div>
-</div>
+  </div>
 
 
 <div class="container">
@@ -36,14 +36,15 @@
             </div>
         </div>
 
-    </div><br<br>
+    </div>
+    <br<br>
 
 
 
-    {% endblock %}
+        {% endblock %}
 
-    {% block login %}
-    <script>
-        swal("Welcome {{ username }}", "Start managing your employees now", "success");
-    </script>
-    {% endblock %}
+        {% block login %}
+        <script>
+            swal("Welcome {{ username }}", "Start managing your employees now", "success");
+        </script>
+        {% endblock %}
