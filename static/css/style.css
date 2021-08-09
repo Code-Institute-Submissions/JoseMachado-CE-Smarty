@@ -109,6 +109,13 @@
    
 }
 
+@media screen and (min-width: 321px) and (max-width: 767px) {
+    .contact{
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
 
 
 
