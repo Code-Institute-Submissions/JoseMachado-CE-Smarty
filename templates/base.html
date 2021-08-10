@@ -46,6 +46,7 @@
                 <h4 class="center-align logo-sidenav">SMARTY</h4>
             </li>
             <hr class="divider">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="{{ url_for('get_employees') }}">Find Employee</a></li>
             {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
