@@ -39,7 +39,7 @@
   * A user wants to find different social medias associated to the website.
 
 ### Site Owners Goals
-  * Advertise the CineShow.
+  * Advertise Smarty as a basic app for managing people.
   * In the middle of a pandemic where people find themselves lockded up in the houses, this website has the purpose of showing people good movies on IMDB and once everything is back open again, people can reach CineShow website in order to look for cinemas in Dublin.
   * Help people who is struggling locked in their own houses.
 
