@@ -40,8 +40,8 @@
 
 ### Site Owners Goals
   * Advertise Smarty as a basic app for managing people.
-  * In the middle of a pandemic where people find themselves lockded up in the houses, this website has the purpose of showing people good movies on IMDB and once everything is back open again, people can reach CineShow website in order to look for cinemas in Dublin.
-  * Help people who is struggling locked in their own houses.
+  * With so many people working from home now. This app has been created with the idea of help people organize their employees accordingly with their department.
+  * Have a basic professional app to manage people.
 
 ### User Requirements and Expectations
 #### Requirements
@@ -49,7 +49,7 @@
   * Appropriate Content about the service.
   * Good color contrast.
   * Accurate employee details.
-.
+
 #### Expectations
   * Proper information about locations.
   * Relevant social medias.
@@ -59,4 +59,33 @@
 ### Design Choices
 #### Fonts
   * The fonts chosen on this website came from [Google fonts](https://fonts.google.com/). This choice has been made because of the probability of working on any browser.
+
+  #### Icons
+  * Icons have been picked from [Font Awesome](https://fontawesome.com/).
+
+#### Colors
+  * Colors have been picked up from [Color Hunt](https://https://colorhunt.co/).
+  * I also used the website [Coloors](https://coolors.co/) for make the colors pallet.
+
+  ![Color Scheme](assets/images/palette.png)
+  * #f57c00 - Main ton of orange 
+  * #fff - White used for main text
+  * rgb(233, 206, 156) - Flash when user logs out
+  * rgb(233, 206, 156) - border form
+  * rgba(1, 0, 3, 0.4) - Ton of black of box on home page
+
+#### Structure
+  * For the website structure I have been used [Materialize](https://materializecss.com/).
+  
+## Wireframes
+
+I have decided to use [Balsamiq Wireframes](https://balsamig.com) to create 3 different wireframes for my website.
+
+### [Desktop Wireframe](wireframes/csdesktop.png)
+### [Tablet Wireframe](wireframes/ipad_wireframe.png)
+### [Phone Wireframe](wireframes/phone_wireframe.png)
+
+
+
+
 

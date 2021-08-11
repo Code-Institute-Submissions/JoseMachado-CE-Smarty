@@ -8,7 +8,6 @@
 }
 
 .logo-sidenav {
-    color: #424242;
     letter-spacing: 2px;
 }
 
@@ -20,10 +19,6 @@
     background-color: #f57c00;
 }
 
-.alert {
-    background-color: darkcyan;
-    height: auto;
-}
 
 .contact {
     display: block;
