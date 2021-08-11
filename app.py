@@ -158,9 +158,9 @@ def get_departments():
     return render_template("departments.html", departments=departments)
 
 
-@app.route("/add_department", methods=["GET", "POST"])
-def add_department():
-
+@app.route("/add_departments", methods=["GET", "POST"])
+def add_departments():
+    return render_template("add_departments.html")
 
 
 if __name__ == "__main__":
