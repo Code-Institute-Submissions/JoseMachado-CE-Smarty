@@ -86,6 +86,41 @@ I have decided to use [Balsamiq Wireframes](https://balsamig.com) to create 3 di
 ### [Phone Wireframe](wireframes/phone_wireframe.png)
 
 
+The wireframes really helped me to give me a perpespective on how the wesbite would be made out at the end. 
+
+## Features
+### 1. Existing Features
+#### Navigation
+The navigation bag that I hava come up with for the website is a basic navbar which comes from materializecss. It has the logo of the website on top left corner.
+When the page is opened for the first time you will only have 3 buttons on the navbar which are home, sign in and sign up buttons.
+And then once the user is logged in you will only have 5 buttons which are home, find employee, profile, new employee and log out.
+
+#### Home
+This page which is the main and first page when user firstly enters the website. On this page the user will see a big picture along with a setence/title within this big picture. Below this picure there are 2 sections which are the about section and the section that tries to explain a little bit what the app is about and then below these 2 sections there is the footer.
+
+#### Log In
+The sign in page is the page which the user can log in themselves.
+
+#### Sign up 
+The sign up page is the page which the user can register themselves for the first time.
+
+#### Log out
+The log out page is the page which the user can log themselves out of the page. Which it takes straigt away to the login page.
+
+#### Find Employee
+This page will show you all the employees.
+
+#### Profile
+This page will show the user's profile.
+
+#### New Employee
+This page is the page designed to add the employees to their designated departments.
+
+#### Departments 
+This page will only be shown to the admin.
+
+
+
 
 
 
