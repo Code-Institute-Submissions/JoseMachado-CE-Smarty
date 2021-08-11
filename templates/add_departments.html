@@ -1,33 +1,44 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container">
-    <div class="employee-main-title">
-        <h2 id="employee-title" class="center-align white-text">Add Department</h2>
-    </div>
-    <div class="row card-panel orange darken-2"></div>
-        <form class="col s12" method="POST" action="{{ url_for('add_department') }}">
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="far fa-building prefix orange-text text-darken-2"></i>
-                    <select id="management_department" name="management_department" class="validate" required>
-                        {% for department in management %}
-                        <option value="{{ department.management_department }}">
-                            {{- department.management_department -}}</option>
-                        {% endfor %}
-                    </select>
-                    <label for="management_department"></label>
-                    <span class="helper-text">Department</span>
-                </div>
-            </div>  
-            <div class="row">
-                <div class="col s2 center-align">
-                    <button class="btn btn-large orange darken-2 button-form" type="submit" name="action">Add
-                    </button>
-                </div>
+    <div class="row card-panel grey lighten-4">
+       
+        <div id="personal" class="col s12">
+            <div class="employee-main-title">
+                <h2 id="employee-title" class="center-align orange-text">Edit employee</h2>
             </div>
-        </form>
+            <div class="row">
+                <form class="col s12" method="POST" action="{{ url_for('add_departments') }}">
+                    <!-- task description -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="far fa-building prefix orange-text text-darken-2"></i>
+                            <select id="management_department" name="management_department" class="validate" required>
+                                {% for department in management %}
+                                <option value="{{ department.management_department }}">
+                                    {{- department.management_department -}}</option>
+                                {% endfor %}
+                            </select>
+                            <label for="management_department"></label>
+                            <span class="helper-text">Department</span>
+                        </div>
+                    </div>
+                    <!-- submit button -->
+                    <div class="row">
+                        <div class="col s2 center-align">
+                            <button class="btn btn-large orange darken-2 button-form" type="submit" name="action">Add 
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+            </form>
+        </div>
     </div>
 </div>
+
 
 
 

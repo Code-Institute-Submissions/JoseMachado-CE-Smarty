@@ -102,6 +102,11 @@
     padding: 10px;
 }
 
+.add_department {
+    margin-top: 2vh;
+    border: 5px solid #f57c00;
+}
+
 
 .callout img {
     width: 100%;
