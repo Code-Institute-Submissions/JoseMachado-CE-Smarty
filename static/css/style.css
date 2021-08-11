@@ -97,6 +97,11 @@
     text-transform: uppercase;
 }
 
+.button-dpt {
+    background: rgba(1, 0, 3, 0.4);
+    padding: 10px;
+}
+
 
 .callout img {
     width: 100%;
