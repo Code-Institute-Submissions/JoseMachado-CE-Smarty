@@ -119,6 +119,39 @@ This page is the page designed to add the employees to their designated departme
 #### Departments 
 This page will only be shown to the admin.
 
+## Technologies used
+### Languages
+* [HTML5](https://en.wikipedia.org/wiki/HTML5) - used to create the HTML base.
+* [CSS](https://en.wikipedia.org/wiki/CSS) - used to give style to the HTML5 elements.
+* [JavasCript(JQuery)](https://en.wikipedia.org/wiki/JavaScript) - used to 
+incorporate behaviors to the website.
+* [Python](https://www.python.org/) - used to create the back-end of the website.
+
+### Libraries and Frameworks
+* [Font Awesome](https://fontawesome.com/) - I used font Awesome for Icons.
+* [Materialize](https://materializecss.com/) - I used Materialize for the website structure.
+* [Google Fonts](https://fonts.google.com/) - I used Googgle Fonts to obtain a better font for the website text.
+
+### Tools
+* [Gitpod](https://www.gitpod.io/) - I used gitpod for better tracebility.
+* [Github](https://github.com/) - I used github for creating my repository
+* [Git](https://git-scm.com/) - I used git as version control for better record of my coding.
+* [Balsamic](https://balsamiq.com/wireframes/) - I Used it to create the Wireframes
+* [Ami Mockup Image](http://ami.responsivedesign.is/) - I used it to create the mockup image with the website displayed in 4 different device frames.
+* [W3C HTML Validation Service](https://validator.w3.org/)
+* [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+* [Javascript Validation](https://beautifytools.com/)
+* [EmailJS](https://emailjs.com)
+* [Leaflet](https://leafletjs.com)
+* [SweetAlert](https://sweetalertjs.js.org)
+* [Heroku](https://id.heroku.com/login)
+* [Jinja](https://jinja.palletsprojects.com/en/3.0.x/)
+* [SweetAlert](https://sweetalert.js.org/guides/)
+* [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/utils/)
+* [MongoDB](https://www.mongodb.com/)
+
+
+
 
 
 
