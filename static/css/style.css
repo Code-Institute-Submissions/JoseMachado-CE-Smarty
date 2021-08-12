@@ -73,6 +73,9 @@
     text-transform: uppercase;
 }
 
+.add_department {
+    margin-top: 20px;
+}
 .card .card-image img {
     width: 50%;
 }
