@@ -73,46 +73,15 @@
     text-transform: uppercase;
 }
 
-#col-home {
-    position: absolute;
+.card .card-image img {
+    width: 50%;
 }
 
-#row-home {
-    position: relative;
-    display: flex;
-    vertical-align: middle;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-}
-
-.title-box {
-    margin-bottom: 30%;
-    background: rgba(1, 0, 3, 0.4);
-    width: 60%;
-    text-decoration: uppercase;    
-}
-
-.title-main{
-    text-transform: uppercase;
-}
-
-.button-dpt {
-    background: rgba(1, 0, 3, 0.4);
-    padding: 10px;
-}
-
-.add_department {
-    margin-top: 2vh;
-    border: 5px solid #f57c00;
+.card .card-title  {
+    margin-top: 20px;
 }
 
 
-.callout img {
-    width: 100%;
-    margin-top: 0;
-   
-}
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
     .contact{

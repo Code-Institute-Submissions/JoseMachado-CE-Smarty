@@ -1,50 +1,37 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="col s12 m8 offset-m2 l6 offset-l3">
-    <div class="card-panel grey lighten-5 z-depth-1">
-      <div class="row valign-wrapper">
-        <div class="col s2">
-          <img src="" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-        </div>
-        <div class="col s10">
-          <span class="black-text">
-            This is a square image. Add the "circle" class to it to make it appear circular.
-          </span>
+<div class="container">
+  <div class="row">
+      <div class="col s3 m4">
+        <div class="card">
+          <div class="card-image">
+            <img src="/static/images/img3.png">
+            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="fas fa-plus"></i></a>
+          </div>
+          <div class="card-title">Card Title</div>
+          <div class="card-content">
+            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-
-
-<div class="container">
-    <div class="section">
-
-        <!--   Icon Section   -->
+      <div class="col s8 m6">
         <div class="row">
-            <div class="col s12 m6">
-                <div class="icon-block">
-                    <h2 class="center light-blue-text"><i class="fa fa-network-wired"></i></h2>
-                    <h5 class="center white-text">Improve Workforce Management Efficiencies</h5>
-                </div>
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <label for="textarea1">Textarea</label>
+              </div>
             </div>
-
-            <div class="col s12 m6">
-                <div class="icon-block">
-                    <h2 class="center light-blue-text"><i class="fa fa-user-plus"></i></h2>
-                    <h5 class="center white-text">Securing Employee Information</h5>
-                </div>
-            </div>
+          </form>
         </div>
+      </div>
 
     </div>
-    <br<br>
+  {% endblock %}
 
-
-
-        {% endblock %}
-
-        {% block login %}
-        <script>
-            swal("Welcome {{ username }}", "Start managing your employees now", "success");
-        </script>
-        {% endblock %}
+  {% block login %}
+  <script>
+    swal("Welcome {{ username }}", "Start managing your employees now", "success");
+  </script>
+  {% endblock %}
