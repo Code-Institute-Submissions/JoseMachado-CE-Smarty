@@ -81,7 +81,28 @@
     margin-top: 20px;
 }
 
+.profile-info  {
+    margin-top: 8px;
+}
 
+.profile-info-text-area {
+    margin-top: 8px;
+    
+}
+
+.right-align {
+    display: flex;
+    justify-content: flex-end;
+    letter-spacing: 10px;
+}
+
+ul .right-align li {
+    margin-bottom: 30px;
+}
+
+.panel-footer {
+    align-items: center;
+}
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
     .contact{
