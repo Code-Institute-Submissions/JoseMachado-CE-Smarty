@@ -41,6 +41,10 @@
     color: #f57c00;
 }
 
+.buttons-search {
+    margin-left: 10px;
+}
+
 .danger {
     background-color: red;
 }

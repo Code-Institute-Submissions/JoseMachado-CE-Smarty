@@ -148,7 +148,6 @@ def delete_employee(employee_id):
     mongo.db.employees.remove({"_id": ObjectId(employee_id)})
 
     return redirect(url_for("get_employees"))
-    flash('You have deleted {{ username }}', 'logout-flash')
 
 
 @app.route("/get_departments")
@@ -167,6 +166,13 @@ def add_departments():
         return redirect(url_for("get_employees"))
 
     return render_template("add_departments.html")
+
+
+@app.route("/search", methods=["POST", "GET"])
+def search():
+    query = request.form.get("query").lower()
+    employees = list(mongo.db.employees.find({"$text": {"$search": query}}))
+    return render_template("employees.html", employees=employees)
 
 
 if __name__ == "__main__":
