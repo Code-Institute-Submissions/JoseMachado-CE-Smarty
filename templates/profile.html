@@ -1,46 +1,48 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container">
-  <div class="row">
-    <div class="col s12 m4">
-      <div class="card">
-        <div class="card-image">
-          <img src="/static/images/img3.png">
-          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="fas fa-plus"></i></a>
+<div class="accordion-wrap">
+  <div class="accordion">
+    <a href="#" class="active"><i class="fa fa-user"></i> Profile</a>
+    <div class="sub-nav active">
+      <div class="html about-me">
+        <div class="photo">
+          <div class="photo-overlay">
+            <span class="plus">+</span>
+          </div>
         </div>
-        <div class="card-title">Card Title</div>
-        <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I
-            require little markup to use effectively.</p>
+        <h4>@{{ username }}</h4>
+        <p>Hi, It's me Mohan. I'm a web and graphics designer. Designing is my passion and I have been working on various designing projects.</p>
+        <div class="photo-overlay">
+          <a href="{{ url_for('add_employee') }}" class="plus">+</a>
+        </div>
+        <div class="social-link">
+          <a class="link link-twitter" href="https://twitter.com/khadkamhn/" target="_blank"><i class="fa fa-twitter"></i></a>
+          <a class="link link-codepen" href="https://codepen.io/khadkamhn/" target="_blank"><i class="fa fa-codepen"></i></a>
+          <a class="link link-facebook" href="https://facebook.com/khadkamhn/" target="_blank"><i class="fa fa-facebook"></i></a>
+          <a class="link link-dribbble" href="http://dribbble.com/khadkamhn" target="_blank"><i class="fa fa-dribbble"></i></a>
         </div>
       </div>
     </div>
-    <div class="profile-info col s12 m7 grey darken-3">
-      <div class="panel-card">
-        <div class="row">
-          <form class="col s12">
-            <div class="row">
-              <div class="input-field col s12">
-                <textarea id="textarea1" class="materialize-textarea"></textarea>
-                <label for="textarea1">Save what you need to do here</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col s12">
-                <button class="btn">button</button>
-              </div>
-              
-            </div>
-          </form>
-        </div>
+    <a href="#"><i class="fa fa-comments"></i> Chat</a>
+    <div class="sub-nav">
+      <div class="html chat">
         
       </div>
-
     </div>
-    {% endblock %}
+    <a href="#"><i class="fa fa-envelope"></i> Email</a>
+    <a href="#"><i class="fa fa-dribbble"></i> Add New Employees</a>
+    <div class="sub-nav">
+      <div class="html invite">
+        <p>Enjoy <span class="dribbble">Smarty</span> web/app</p>
+        <a class="btn" href="{{ url_for('add_employee') }}" target="_blank">Add Employee</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
 
-    {% block login %}
+{% block login %}
     <script>
       swal("Welcome {{ username }}", "Start managing your employees now", "success");
     </script>
-    {% endblock %}
+{% endblock %}
