@@ -7,7 +7,10 @@
       <div class="html about-me">
         <div class="photo">
           <div class="photo-overlay">
-            <span class="plus">+</span>
+            {% for employee in employees %}
+              <img src="{{ employee.management_media }}">
+              <span class="plus">+</span>
+            {% endfor %}
           </div>
         </div>
         <h4>@{{ username }}</h4>

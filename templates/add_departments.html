@@ -5,7 +5,7 @@
        
         <div id="personal" class="col s12">
             <div class="employee-main-title">
-                <h2 id="employee-title" class="center-align orange-text">Edit employee</h2>
+                <h2 id="employee-title" class="center-align orange-text offset-s4">Departments</h2>
             </div>
             <div class="row">
                 <form class="col s12" method="POST" action="{{ url_for('add_departments') }}">
@@ -13,12 +13,12 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="far fa-building prefix orange-text text-darken-2"></i>
-                            <select id="management_department" name="management_department" class="validate" required>
+                            <input id="management_department" name="management_department" class="validate" required>
                                 {% for department in management %}
                                 <option value="{{ department.management_department }}">
                                     {{- department.management_department -}}</option>
                                 {% endfor %}
-                            </select>
+                            </input>
                             <label for="management_department"></label>
                             <span class="helper-text">Department</span>
                         </div>

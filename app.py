@@ -89,7 +89,6 @@ def profile(username):
     return redirect(url_for('login'))
 
 
-
 @app.route('/logout')
 def logout():
     flash('You have logged out', 'logout-flash')
@@ -160,6 +159,13 @@ def get_departments():
 
 @app.route("/add_departments", methods=["GET", "POST"])
 def add_departments():
+    if request.method == 'POST':
+        management = {
+            "management_department": request.form.get("management_department")
+        }
+        mongo.db.management.insert_one(management)
+        return redirect(url_for("get_employees"))
+
     return render_template("add_departments.html")
 
 

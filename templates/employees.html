@@ -4,6 +4,17 @@
     <div class="employee-main-title">
         <h2 id="employee-title" class="center-align white-text">Employees</h2>
     </div>
+    <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s6 left-align">
+              <input id="last_name" type="text" class="validate">
+              <label for="last_name">Search for Employee</label>
+              <button class="btn orange darken-2">BUTTON</button>
+            </div>
+          </div>
+        </form>
+    </div>
 
     <ul class="collapsible ">
         {% for employee in employees %}
