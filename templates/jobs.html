@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+        <div class="employee-main-title">
+            <h2 id="employee-title" class="center-align white-text">Job Market</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            {% for job in jobs %}
+                <div class="col s12 m6">
+                    <div class="card white darken-2">
+                        <div class="card-content">
+                            <a href="{{ url_for('job', job_id=job._id) }}" class="card-title text-uppercase orange-text">{{ job.job_name }}</a>
+                            <p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+{% endblock %}

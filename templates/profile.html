@@ -1,47 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="accordion-wrap">
-  <div class="accordion">
-    <a href="#" class="active"><i class="fa fa-user"></i> Profile</a>
-    <div class="sub-nav active">
-      <div class="html about-me">
-        <div class="photo">
-          <div class="photo-overlay">
-            {% for employee in employees %}
-              <img src="{{ employee.management_media }}">
-              <span class="plus">+</span>
-            {% endfor %}
-          </div>
-        </div>
-        <h4>@{{ username }}</h4>
-        <p>Hi, It's me Mohan. I'm a web and graphics designer. Designing is my passion and I have been working on various designing projects.</p>
-        <div class="photo-overlay">
-          <a href="{{ url_for('add_employee') }}" class="plus">+</a>
-        </div>
-        <div class="social-link">
-          <a class="link link-twitter" href="https://twitter.com/khadkamhn/" target="_blank"><i class="fa fa-twitter"></i></a>
-          <a class="link link-codepen" href="https://codepen.io/khadkamhn/" target="_blank"><i class="fa fa-codepen"></i></a>
-          <a class="link link-facebook" href="https://facebook.com/khadkamhn/" target="_blank"><i class="fa fa-facebook"></i></a>
-          <a class="link link-dribbble" href="http://dribbble.com/khadkamhn" target="_blank"><i class="fa fa-dribbble"></i></a>
-        </div>
-      </div>
-    </div>
-    <a href="#"><i class="fa fa-comments"></i> Chat</a>
-    <div class="sub-nav">
-      <div class="html chat">
-        
-      </div>
-    </div>
-    <a href="#"><i class="fa fa-envelope"></i> Email</a>
-    <a href="#"><i class="fa fa-dribbble"></i> Add New Employees</a>
-    <div class="sub-nav">
-      <div class="html invite">
-        <p>Enjoy <span class="dribbble">Smarty</span> web/app</p>
-        <a class="btn" href="{{ url_for('add_employee') }}" target="_blank">Add Employee</a>
-      </div>
-    </div>
-  </div>
-</div>
+
+
+
+
 {% endblock %}
 
 {% block login %}

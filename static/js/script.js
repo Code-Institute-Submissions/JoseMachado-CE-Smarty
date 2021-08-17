@@ -54,6 +54,8 @@ Profile = {
     }
 }
 
+
+
 function displayError(message) {
     Swal.Fire({
         title: 'Error!',

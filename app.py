@@ -84,7 +84,8 @@ def profile(username):
         {"username": session["user"]})["username"]
     
     if session['user']:
-        return render_template('profile.html', username=username)
+        jobs = list(mongo.db.jobs.find().sort("job_name", 1))
+        return render_template('profile.html', username=username, jobs=jobs)
 
     return redirect(url_for('login'))
 
@@ -108,8 +109,7 @@ def add_employee():
             "management_phone": request.form.get("management_phone"),
             "management_email": request.form.get("management_email"),
             "management_manager": session["user"],
-            "management_media": session["management_media"]
-            
+            "management_media": request.form.get("management_media")
         }
         mongo.db.employees.insert_one(employee)
 
@@ -136,7 +136,6 @@ def edit_employee(employee_id):
         }
         mongo.db.employees.update({"_id": ObjectId(employee_id)}, employee_edit)
         return redirect(url_for("get_employees"))
-
     
     employee = mongo.db.employees.find_one({"_id": ObjectId(employee_id)})
     management = mongo.db.management.find().sort("management_department", 1)
@@ -155,6 +154,18 @@ def get_departments():
     departments = list(mongo.db.management.find().sort("management_department", 1))
     return render_template("departments.html", departments=departments)
 
+
+@app.route("/jobs")
+def jobs():
+    jobs = list(mongo.db.jobs.find().sort("job_name", 1))
+    return render_template("jobs.html", jobs=jobs)
+
+
+@app.route("/job/<job_id>")
+def job(job_id):
+    job = mongo.db.jobs.find_one({"_id": ObjectId(job_id)})
+    return render_template("job.html", job=job)
+        
 
 @app.route("/add_departments", methods=["GET", "POST"])
 def add_departments():
