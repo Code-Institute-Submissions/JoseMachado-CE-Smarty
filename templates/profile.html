@@ -2,6 +2,22 @@
 {% block content %}
 
 
+<div class="container">
+  <div class="box">
+    <img src="/static/images/img2.png" class="box-img">
+    <h2>@{{ username }}</h2>
+    <p class="text-profile  ">
+    </p>
+    <ul>
+      <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+      <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+      <li><a href="#"><i class="fab fa-youtube-square"></i></a></li>
+    </ul>
+    <a href="{{ url_for('add_employee') }}" class="btn-large orange white-text">Add Employee <i class="fas fa-users"></i></a>
+  </div>
+  
+</div>
+
 
 
 {% endblock %}
