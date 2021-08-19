@@ -165,7 +165,7 @@ def jobs():
 def job(job_id):
     job = mongo.db.jobs.find_one({"_id": ObjectId(job_id)})
     return render_template("job.html", job=job)
-        
+
 
 @app.route("/add_departments", methods=["GET", "POST"])
 def add_departments():

@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             {% for job in jobs %}
-                <div class="col s12 m6">
+                <div id="boxes-jobs" class="col s12 m8 offset-m2">
                     <div class="card white darken-2">
                         <div class="card-content">
                             <a href="{{ url_for('job', job_id=job._id) }}" class="card-title text-uppercase orange-text">{{ job.job_name }}</a>

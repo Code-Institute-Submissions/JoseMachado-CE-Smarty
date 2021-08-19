@@ -2,7 +2,7 @@
 {% block content %}
 <div class="container">
     <div class="parallax-container valign-wrapper section scrollspy" id="aboutus">
-        <div class="section no-pad-bot">
+        <div class="section">
             <div class="container">
                 <div class="center row col s3">
 
@@ -10,10 +10,10 @@
                 </div>
                 <div class="center row col s3">
 
-                    <h3 class="white-text">Salary Base: {{ job.job_salary }}</h3>
+                    <h3 class="white-text text-uppercase">Salary Base: {{ job.job_salary }}</h3>
                 </div>
                 <div class="center row col s12">
-                    <p class="white-text text-uppercase">{{ job.job_description }} </p>
+                    <p id="text-description-job" class="white-text text-uppercase">{{ job.job_description }} </p>
                     <a href="{{ url_for('jobs') }}" class="btn-large  grey lighten-5 orange-text">Back to Job Markets</a>
                 </div>
 

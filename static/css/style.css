@@ -15,6 +15,7 @@
     width: 100%;
 }
 
+
 .aboutsmarty {
     text-transform: uppercase;
 }
@@ -161,10 +162,26 @@ ul .right-align li {
     font-weight: 100;
 }
 
+#text-description-job {
+    text-overflow: initial;
+}
+
 .box h5 {
     font-size: 20px;
     letter-spacing: 3px;
     font-weight: 100;
+}
+
+#text-description-job {
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.text-uppercase {
+    font-size: 35px;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .box p {
@@ -204,11 +221,29 @@ footer{
     #employee-title {
         font-size: 5vh;
     }
+
     .aboutsmarty {
         font-size: 5vh;
     }
 
-    
+    #text-description-job {
+        font-size: 12px;
+        margin-bottom: 3px;
+        margin-top: 0;
+    }
 
+    .text-uppercase {
+        font-size: 25px;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    .row .col.s6 {
+        width: 100%;
+    }
     
 }
