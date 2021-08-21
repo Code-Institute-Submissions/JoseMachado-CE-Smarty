@@ -191,6 +191,26 @@ Any user should be able to access the website from mobile and it still be have a
 
 ![Mobile](/static/images/phone.PNG)
 
+#### Access to log in to the website
+Any existing user who can provide the right username and password can have access to the website.
+
+![Mobile](/static/images/login.PNG)
+
+In case the existing does not provid correct the either username or password. A red card will pop up on the screen warning the user.
+
+![Mobile](/static/images/error.PNG)
+
+#### Profile Page
+After the user can provide the correct info to log in to the website. A profile page will be shown on the screen.
+
+![Mobile](/static/images/profile_.PNG)
+
+
+
+
+
+
+
 
 
 
