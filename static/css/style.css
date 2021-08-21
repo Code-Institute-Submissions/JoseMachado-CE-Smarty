@@ -7,6 +7,10 @@
     text-transform: uppercase;
 }
 
+#jobs-text {
+    font-weight: 800;
+}
+
 .logo-sidenav {
     letter-spacing: 2px;
 }
