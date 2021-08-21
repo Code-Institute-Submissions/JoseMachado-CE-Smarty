@@ -170,6 +170,32 @@ These validators below were used in order to check the projects against syntax e
 * [JSHint](https://jshint.com/)
 * [PEP8](https://www.python.org/dev/peps/pep-0008/)
 
+### Test User Storie
+#### First look from user
+A brief explanation about the website in regards to what the website is about.
+
+![User first look](/static/images/userstories.PNG)
+
+#### User able to register themselves
+A user only needs to click on the "Sign up" button on navbar.
+
+![Register](/static/images/register.PNG)
+
+#### User able to look at a few job markets 
+If a user wants to look at a few job markets for curiosity. There is a page that was buit including 4 job markets.
+
+![Job Market](/static/images/job_market.PNG)
+
+#### Access to the website on mobile and desktop
+Any user should be able to access the website from mobile and it still be have a nice experience surfing on the website. The website should be responsive and it can not brake.
+
+![Mobile](/static/images/phone.PNG)
+
+
+
+
+
+
 
 
 
