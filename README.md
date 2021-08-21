@@ -19,6 +19,7 @@
     * [Languages](#languages)
     * [Libraries and Frameworks](#tools-and-libraries)
     * [Tools](#tools)
+* [Information Architecture](#information-architecture)
 * [Testing](#testing)
 * [Deployment](#deployment)
 * [Credits](#credits)
@@ -110,6 +111,9 @@ The log out page is the page which the user can log themselves out of the page. 
 #### Find Employee
 This page will show you all the employees.
 
+#### Job Market
+This page will show the 4 of the most wanted job market with details.
+
 #### Profile
 This page will show the user's profile.
 
@@ -141,14 +145,24 @@ incorporate behaviors to the website.
 * [W3C HTML Validation Service](https://validator.w3.org/)
 * [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
 * [Javascript Validation](https://beautifytools.com/)
-* [EmailJS](https://emailjs.com)
-* [Leaflet](https://leafletjs.com)
 * [SweetAlert](https://sweetalertjs.js.org)
 * [Heroku](https://id.heroku.com/login)
 * [Jinja](https://jinja.palletsprojects.com/en/3.0.x/)
 * [SweetAlert](https://sweetalert.js.org/guides/)
 * [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/utils/)
 * [MongoDB](https://www.mongodb.com/)
+
+## Information Architecture
+
+MongoDB atlas was the platform used for storing data.
+
+A diagram has been made.
+
+![Smarty data diagram](/static/images/SMARTY.png)
+
+## Testing
+
+Validators
 
 
 
