@@ -161,8 +161,17 @@ A diagram has been made.
 ![Smarty data diagram](/static/images/SMARTY.png)
 
 ## Testing
+### Validators
 
-Validators
+These validators below were used in order to check the projects against syntax errors.
+
+* [W3C HTML Validator](https://validator.w3.org/)
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+* [JSHint](https://jshint.com/)
+* [PEP8](https://www.python.org/dev/peps/pep-0008/)
+
+
+
 
 
 
