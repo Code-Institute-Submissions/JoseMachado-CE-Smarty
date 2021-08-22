@@ -194,16 +194,41 @@ Any user should be able to access the website from mobile and it still be have a
 #### Access to log in to the website
 Any existing user who can provide the right username and password can have access to the website.
 
-![Mobile](/static/images/login.PNG)
+![Log In](/static/images/login.PNG)
 
 In case the existing does not provid correct the either username or password. A red card will pop up on the screen warning the user.
 
-![Mobile](/static/images/error.PNG)
+![Error](/static/images/error.PNG)
 
 #### Profile Page
 After the user can provide the correct info to log in to the website. A profile page will be shown on the screen.
 
-![Mobile](/static/images/profile_.PNG)
+![Profile](/static/images/profile_.PNG)
+
+#### A user can add employees to the website
+Any user can add employee to the Smarty system.
+
+![Add Employee](/static/images/addemployees.PNG)
+
+There is another tab as well to insert employees documents. This tab is a future feature to be worked on.
+
+![Add Document](/static/images/adddocuments.PNG)
+
+#### Find employee by name or department
+A user has the option to find an employee that has been added to Smarty system. It can be done by the employee's name or department.
+
+![Find Employee](/static/images/findemployee.PNG)
+
+#### Log out
+A user when wants to log out of the website they can click on the "Log out" button on the navbar and then the page goes to the login page.
+
+![Log out](/static/images/Log_out.PNG)
+
+
+
+
+
+
 
 
 
