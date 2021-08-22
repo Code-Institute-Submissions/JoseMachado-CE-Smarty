@@ -73,6 +73,10 @@
     margin-bottom: 5%;
 }
 
+.box-departments {
+    border: 3px solid orange;
+}
+
 
 .tilte-employee {
     margin-left: 15px;
@@ -96,6 +100,7 @@
 
 .card .card-title {
     margin-top: 20px;
+    font-weight: 700;
 }
 
 .profile-info {

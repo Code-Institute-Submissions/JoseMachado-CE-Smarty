@@ -23,9 +23,9 @@ def home():
     return render_template("home.html")
 
 
-@app.route('/get_employees/<employee_id>', methods=['GET', 'POST'])
-def get_employees(employee_id):
-    employees = list(mongo.db.employees.find({"_id": ObjectId(employee_id)}))
+@app.route("/get_employees")
+def get_employees():
+    employees = list(mongo.db.employees.find())
     return render_template("employees.html", employees=employees)
 
 
