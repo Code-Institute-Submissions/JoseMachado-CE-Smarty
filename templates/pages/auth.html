@@ -1,0 +1,32 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+{% include 'components/navigation/nav.html' %}
+    {% if register == True %}
+
+        <div class="contact container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="contact-title">Register</h1>
+                    <p class="lead">Don't wast no time. Get in touch with us to know what is the new release.
+                    </p>
+                </div>
+            </div>
+            {% include 'components/forms/auth.html' %}
+        </div>
+    {% else %}
+
+        <div class="contact container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="contact-title">Log In</h1>
+                </div>
+            </div>
+            {% include 'components/forms/auth.html' %}
+        </div>
+        {% include 'components/footer/footer.html' %}
+    {% endif %}
+
+    
+    
+{% endblock %}
+

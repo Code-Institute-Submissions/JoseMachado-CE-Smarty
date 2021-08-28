@@ -55,6 +55,54 @@ def register():
     return render_template("pages/auth.html", register=True)
 
 
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    """
+    This function allows the user the log themselves into the website
+    """
+    if request.method == "POST":
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            if check_password_hash(existing_user["password"],
+            request.form.get("password")):
+                user_id = str(existing_user["_id"])
+                session["user_id"] = str(user_id)
+
+                employee_profile = mongo.db.employees.find_one({"user_id": user_id})
+
+                if employee_profile:
+                    employee_id = employee_profile["_id"]
+                    employees = mongo.db.employees.find({"user_id": user_id})
+                    return redirect(url_for("view_dashboard", user_id=user_id, employee_id=employee_id))
+
+                else:
+                    employees = mongo.db.employees.find({"user_id":user_id})
+                    return redirect(url_for("blank_dasboard", user_id=user_id))
+        
+            else:
+                flash("Incorrect Username and/or Password", "danger")
+                return redirect(url_for("login"))
+        else:
+            flash("Incorrect Username and/or Password", "danger")
+            return redirect(url_for("login"))
+
+    return render_template("pages/auth.html")
+
+
+
+
+@app.route("/logout")
+def logout():
+    """
+    This function allows user to log themselve out of the website
+    """
+    flash('You have logged out', 'logout-flash')
+    session.clear()
+    return render_template("pages/home.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

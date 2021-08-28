@@ -1,0 +1,48 @@
+{% if register == True %}
+<form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
+{% else %}
+<form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
+{% endif %}
+<div class="card-panel">
+    <!-- username -->
+    <div class="row">
+        <div class="input-field col s12">
+            <i class="fas fa-user-plus prefix orange-text text-darken-2"></i>
+            <input id="username" name="username" type="text" minlength="5" maxlength="15"
+                pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+            <label for="username">Username</label>
+        </div>
+    </div>
+    <!-- passowrd -->
+    <div class="row">
+        <div class="input-field col s12">
+            <i class="fas fa-lock-open prefix orange-text text-darken-2"></i>
+            <input id="password" name="password" type="password" minlength="5" maxlength="15"
+                pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+            <label for="password">Password</label>
+        </div>
+    </div>
+    <div class="row">
+        {% if register == True %}
+        <button type="submit" class="col s12 btn-large orange darken-2 text-shadow">
+            Registers <i class="fas fa-sign-in-alt"></i>
+        </button>
+        {% else %}
+        <button type="submit" class="col s12 btn-large orange darken-2 text-shadow">
+            Log in <i class="fas fa-sign-in-alt"></i>
+        </button>
+        {% endif %}
+    </div>
+    <div class="row">
+        <div class="col s12">
+            {% if register == True %}
+            <p class="center-align">
+                Already an user? <a class="italic-reg-sign" href=''>Log in here</a>
+            </p>
+            {% else %}
+            <p class="center-align">
+                Register here <a class="italic-reg-sign" href=''>Register in here</a>
+            </p>
+            {% endif %}
+        </div>
+    </div>
