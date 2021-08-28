@@ -5,8 +5,10 @@ $(document).ready(function () {
     $('input#input_text, textarea#textarea2').characterCounter();
     $('.datepicker').datepicker();
     $('select').formSelect();
-
+    $('.tooltipped').tooltip();
 });
+
+
 
 $(function () {
     Profile.load();

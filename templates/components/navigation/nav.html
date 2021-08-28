@@ -1,0 +1,44 @@
+<nav class="nav-extended orange darken-2">
+    <div class="nav-wrapper">
+        <a href="" class="brand-logo">SMARTY</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="">Job Market</a></li>
+            {% if session.user %}
+                <li><a href="">Find Employee</a></li>
+                <li><a href="">Profile</a></li>
+                <li><a href="">New Employee</a></li>
+                {% if session.user|lower == "admin"|lower %}
+                    <li><a href="">Departments</a></li>
+                {% endif %}
+                <li><a href="">Log out</a></li>
+            {% else %}
+                <li><a href="">Log in</a></li>
+                <li><a href="">Sign up</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
+<!-- Sidenav for phones -->
+<ul class="sidenav deep-orange lighten-2" id="mobile-demo">
+    <li>
+        <h4 class="center-align logo-sidenav">SMARTY</h4>
+    </li>
+    <hr class="divider">
+    <li><a href="{{ url_for('home') }}">Home</a></li>
+    <li><a href="">Job Market</a></li>
+    {% if session.user %}
+        <li><a href="">Find Employee</a></li>
+        <li><a href="">Profile</a></li>
+        <li><a href="">New Employee</a></li>
+        {% if session.user|lower == "admin"|lower %}
+            <li><a href="">Departments</a></li>
+        {% endif %}
+        <li><a href="">Log out</a></li>
+    {% else %}
+        
+        <li><a href="">Log in</a></li>
+        <li><a href="">Sign up</a></li>
+    {% endif %}
+</ul>

@@ -1,6 +1,6 @@
-{% extends 'base.html' %}
+{% extends 'layout/base.html' %}
 {% block content %}
-
+{% include 'components/navigation/nav.html' %}
 <div class="callout">
     <div class="row center-align" id="row-home">
         <div class="title-box" id="col-home">
@@ -16,7 +16,9 @@
     <div class="row">
         <div class="col s12 center-align">
             <h2 class="aboutsmarty white-text">About</h2>
-            <p class="white-text hide-on-small-only">Smarty is a project that was developed for managing people. This project was brought to life in July of 2021 and the main focus is to show proper skills to use the backend to link up with the front-end. The main and only developer is Jose Machado.</p>
+            <p class="white-text hide-on-small-only">Smarty is a project that was developed for managing people. This
+                project was brought to life in July of 2021 and the main focus is to show proper skills to use the
+                backend to link up with the front-end. The main and only developer is Jose Machado.</p>
         </div>
     </div>
 </div>
@@ -25,12 +27,10 @@
     <div class="row">
         <div class="col s12 center-align">
             <h2 class="aboutsmarty white-text">SMARTY</h2>
-            <p class="white-text">Be smart using smarty. Add people to your account in our app and get to organize the people that you are in contact with.</p>
+            <p class="white-text">Be smart using smarty. Add people to your account in our app and get to organize the
+                people that you are in contact with.</p>
         </div>
     </div>
 </div>
-
-
-
-
+{% include 'components/footer/footer.html' %}
 {% endblock %}
