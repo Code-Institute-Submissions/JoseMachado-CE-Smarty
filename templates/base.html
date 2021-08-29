@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block style %}
+    {% endblock %}
+    <title>Smarty</title>
+</head>
+
+<body class="grey darken-3 profile-back">
+    <header>
+        <!-- Main Navbar -->
+        <nav class="nav-extended orange darken-2">
+            <div class="nav-wrapper">
+                <a href="{{ url_for('get_employees') }}" class="brand-logo">SMARTY</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('jobs') }}">Job Market</a></li>
+                    {% if session.user %}
+                        <li><a href="{{ url_for('get_employees') }}">Find Employee</a></li>
+                        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                        <li><a href="{{ url_for('add_employee') }}">New Employee</a></li>
+                        {% if session.user|lower == "admin"|lower %}
+                            <li><a href="{{ url_for('get_departments') }}">Departments</a></li>
+                        {% endif %}
+                        <li><a href="{{ url_for('logout') }}">Log out</a></li>
+                    {% else %}
+                        <li><a href="{{ url_for('login') }}">Log in</a></li>
+                        <li><a href="{{ url_for('register') }}">Sign up</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+        <!-- Sidenav for phones -->
+        <ul class="sidenav deep-orange lighten-2" id="mobile-demo">
+            <li>
+                <h4 class="center-align logo-sidenav">SMARTY</h4>
+            </li>
+            <hr class="divider">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('jobs') }}">Job Market</a></li>
+            {% if session.user %}
+                <li><a href="{{ url_for('get_employees') }}">Find Employee</a></li>
+                <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                <li><a href="{{ url_for('add_employee') }}">New Employee</a></li>
+                {% if session.user|lower == "admin"|lower %}
+                    <li><a href="{{ url_for('get_departments') }}">Departments</a></li>
+                {% endif %}
+                <li><a href="{{ url_for('logout') }}">Log out</a></li>
+            {% else %}
+                
+                <li><a href="{{ url_for('login') }}">Log in</a></li>
+                <li><a href="{{ url_for('register') }}">Sign up</a></li>
+            {% endif %}
+        </ul>
+    </header>
+
+    <div class="container">
+
+
+        <div class="row">
+            <div class="col-sm-6">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                {% for category, message in messages %}
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="card {{ category }}">
+                            <div class="card-content white-text">
+                                <span class="card-title">Card Title</span>
+                                <p> {{ message }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+            </div>
+        </div>
+    </div>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    {% block scripts %}
+    {% endblock %}
+    {% block login %}
+    {% endblock %}
+    <footer class="page-footer orange darken-2">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">SMARTY</h5>
+                    <p class="grey-text text-lighten-4">A basic web app to help you with your employees.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!"><i class="fab fa-youtube"></i> Youtube</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright orange darken-2">
+            <div class="container">
+                © 2021 Jose Machado CE
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

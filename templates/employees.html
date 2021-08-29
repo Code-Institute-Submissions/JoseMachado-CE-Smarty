@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="employee-main-title">
+        <h2 id="employee-title" class="center-align white-text">Employees</h2>
+    </div>
+    <div class="row">
+        <form action="{{ url_for('search') }}" method="POST" class="col s12">
+          <div class="row">
+            <div id="input-search" class="input-field col s6 left-align">
+              <input id="query" type="text" name="query" class="validate">
+              <label for="query">Search <span class="hide-on-small-only">for Employee or Department</span></label>
+            </div>
+          </div>
+          <div class="row buttons-search">
+            <div class="input-field col s6 left-align">
+                <button type="submit" class="btn orange darken-2"> Search</button>
+                <a href="{{ url_for('get_employees') }}" class="red btn">Reset</a>
+            </div>
+          </div>
+        </form>
+    </div>
+
+    {% if employees|length > 0 %}
+    <ul class="collapsible ">
+        {% for employee in employees %}
+        <li>
+            <div class="collapsible-header orange darken-2">
+                <div class="col s3" style="justify-content: center;">
+                    {% if session.user|lower == employee.management_manager|lower %}
+                        <a href="{{ url_for('edit_employee', employee_id=employee._id) }}" class="brown btn btn-little">Edit</a>
+                        <a href="{{ url_for('delete_employee', employee_id=employee._id) }}" class="red btn btn-little">Delete</a>
+                    {% endif %}
+                </div>
+                <div class="col s9 tilte-employee">
+                    <i class="fas fa-address-card white-text"></i>
+                        {{ employee.management_employee }}
+                </div>
+                    
+                
+            </div>
+            <div class="collapsible-body card-panel">
+                <div class="row">
+                    <div class="input-field col s12 list-group">
+                        <i class="fas fa-building prefix orange-text text-darken-2"></i>
+                        <label class="black-text" for="management_email black-text">{{employee.management_department }}</label>
+                        <span class="helper-text">Deparment</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-table prefix orange-text text-darken-2"></i>
+                        <label class="black-text" for="management_email"> {{employee.management_start_day }}</label>
+                        <span class="helper-text">Start date</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-mobile prefix orange-text text-darken-2"></i>
+                        <label class="black-text"for="management_email"> {{employee.management_phone }}</label>
+                        <span class="helper-text">Phone</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-envelope-square prefix orange-text text-darken-2"></i>
+                        <label class="black-text" for="management_email"> {{employee.management_email}}</label>
+                        <span class="helper-text">Email</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-user-tie prefix orange-text text-darken-2"></i>
+                        <label class="black-text" for="management_email"> {{ employee.management_manager }}</label>
+                        <span class="helper-text">Line Manager</span>
+                    </div>
+                </div>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <script>
+            displayError(message);
+        </script>
+    {% endif %}
+
+</div>
+
+{% endblock %}

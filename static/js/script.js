@@ -9,7 +9,10 @@ $(document).ready(function () {
 });
 
 
-
+$('.card').click(function(){
+    $(this).toggleClass('flipped');
+  });
+  
 $(function () {
     Profile.load();
 });
