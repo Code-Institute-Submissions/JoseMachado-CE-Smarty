@@ -19,18 +19,35 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+@app.route("/home")
 def home():
-    return render_template("home.html")
+    """
+    This Function gets the user to the main page.
+    """
+    if "user" in session:
+        user = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
+        return render_template(
+            "home.html", user=user)
+    else:
+        return render_template("home.html")
 
 
-@app.route("/get_employees")
-def get_employees():
+@app.route("/employees")
+def employees():
+    """
+    This function gets all the employees added to the website
+    shown on this page.
+    """
     employees = list(mongo.db.employees.find())
     return render_template("employees.html", employees=employees)
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    """
+    This function gets the user redirected to the profile page.
+    """
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     
@@ -43,6 +60,10 @@ def profile(username):
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    """
+    This function allows the user to register themselves into
+    the website.
+    """
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
@@ -65,6 +86,12 @@ def register():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    """
+    This function checks if the user is logging themselves
+    using their right info. If they log themslves they get
+    redirected to the profile page if not it gives the user
+    a red flash.
+    """
     if request.method == "POST":
         
         existing_user = mongo.db.users.find_one(
@@ -91,19 +118,26 @@ def login():
 
 @app.route('/logout')
 def logout():
+    """
+    This function gets the user to be logged out of the website.
+    """
     flash('You have logged out', 'logout-flash')
     session.pop('user')
     return redirect(url_for('login'))
 
 
-@app.route("/add_employee", methods=["GET", "POST"])
+@app.route("/add", methods=["GET", "POST"])
 def add_employee():
+    """
+    This function gets the user to add employee to the website.
+    """
     if request.method == "POST":
-        management_is_urgent = "on" if request.form.get("management_is_urgent") else "off"
+        
+        management_active = "on" if request.form.get("management_active") else "off"
         employee = {
             "management_employee": request.form.get("management_employee"),
             "management_department": request.form.get("management_department"),
-            "management_is_urgent": management_is_urgent,
+            "management_active": management_active,
             "management_start_day": request.form.get("management_start_day"),
             "management_phone": request.form.get("management_phone"),
             "management_email": request.form.get("management_email"),
@@ -112,21 +146,25 @@ def add_employee():
         }
         mongo.db.employees.insert_one(employee)
 
-        return redirect(url_for("get_employees"))
+        return redirect(url_for("employees"))
 
     management = mongo.db.management.find().sort("management_department", 1)
-    return render_template('add_employee.html', management=management)
+    return render_template('add.html', management=management)
 
 
-@app.route('/edit_employee/<employee_id>', methods=['GET', 'POST'])
+@app.route('/edit/<employee_id>', methods=['GET', 'POST'])
 def edit_employee(employee_id):
-
+    """
+    This function allows the user to edit their existing employees.
+    It can only be done if the user was the manager who added
+    the employee.
+    """
     if request.method == "POST":
-        management_is_urgent = "on" if request.form.get("management_is_urgent") else "off"
+        management_active = "on" if request.form.get("management_active") else "off"
         employee_edit = {
             "management_employee": request.form.get("management_employee"),
             "management_department": request.form.get("management_department"),
-            "management_is_urgent": management_is_urgent,
+            "management_active": management_active,
             "management_start_day": request.form.get("management_start_day"),
             "management_phone": request.form.get("management_phone"),
             "management_email": request.form.get("management_email"),
@@ -134,52 +172,74 @@ def edit_employee(employee_id):
             "management_media": session["management_media"]
         }
         mongo.db.employees.update({"_id": ObjectId(employee_id)}, employee_edit)
-        return redirect(url_for("get_employees"))
+        return redirect(url_for("employees"))
     
     employee = mongo.db.employees.find_one({"_id": ObjectId(employee_id)})
     management = mongo.db.management.find().sort("management_department", 1)
-    return render_template('edit_employee.html', employee=employee, management=management)
+    return render_template('edit.html', employee=employee, management=management)
 
 
 @app.route("/delete_employee/<employee_id>")
 def delete_employee(employee_id):
+    """
+    This allows the manager to delete a employee who has been 
+    added by them.
+    """
     mongo.db.employees.remove({"_id": ObjectId(employee_id)})
 
-    return redirect(url_for("get_employees"))
+    return redirect(url_for("employees"))
 
 
 @app.route("/get_departments")
 def get_departments():
+    """
+    This function is to show user the departments that exist
+    within the website.
+    """
     departments = list(mongo.db.management.find().sort("management_department", 1))
     return render_template("departments.html", departments=departments)
 
 
 @app.route("/jobs")
 def jobs():
+    """
+    This function allows the user to look a few job markets.
+    """
     jobs = list(mongo.db.jobs.find().sort("job_name", 1))
     return render_template("jobs.html", jobs=jobs)
 
 
 @app.route("/job/<job_id>")
 def job(job_id):
+    """
+    This function allows the user to look a specific job market.
+    """
     job = mongo.db.jobs.find_one({"_id": ObjectId(job_id)})
     return render_template("job.html", job=job)
 
 
 @app.route("/add_departments", methods=["GET", "POST"])
 def add_departments():
+    """
+    This function allows the Admin of the website to add 
+    departments into the website system.
+    """
     if request.method == 'POST':
         management = {
             "management_department": request.form.get("management_department")
         }
         mongo.db.management.insert_one(management)
-        return redirect(url_for("get_employees"))
+        return redirect(url_for("employees"))
 
     return render_template("add_departments.html")
 
 
 @app.route("/search", methods=["POST", "GET"])
 def search():
+    """
+    This function allows the user to look for an employee
+    by their name or by their deparment.
+    """
     query = request.form.get("query").lower()
     employees = list(mongo.db.employees.find({"$text": {"$search": query}}))
     return render_template("employees.html", employees=employees)
