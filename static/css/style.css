@@ -100,8 +100,16 @@
      transition: 0.8s;
     overflow: hidden;
     box-shadow: 0 70px 63px -60px #000000;
-    
-    
+}
+
+#boxes-jobs {
+    margin-top: 20px;
+}
+
+#boxes-jobs:hover {
+    background-color: #f57c00;
+    text-emphasis-color: white;
+    border-radius: 10px;
 }
 
 
@@ -247,7 +255,7 @@ footer{
     }
 
     #employee-title {
-        font-size: 5vh;
+        font-size: 3vh;
     }
 
     .aboutsmarty {
@@ -264,6 +272,11 @@ footer{
         font-size: 25px;
         margin-bottom: 0;
         margin-top: 0;
+    }
+
+    .buttons-edit-delete .btn-little {
+        width: 100%;
+        margin-bottom: 1vh;
     }
 
     .box {

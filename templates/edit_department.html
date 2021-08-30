@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="row card-panel grey lighten-4">
+
+        <div id="personal" class="col s12">
+            <div class="employee-main-title">
+                <h2 id="employee-title" class="center-align orange-text offset-s4">Departments</h2>
+            </div>
+            <div class="row">
+                <form class="col s12" method="POST" action="{{ url_for('edit_departments', department_id=department._id) }}">
+                    <!-- task description -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="far fa-building prefix orange-text text-darken-2"></i>
+                            <input id="management_department" name="management_department" class="validate" required>
+                            
+                            <option value="{{ department.management_department }}">
+                                {{- department.management_department -}}</option>
+                            
+                            </input>
+                            <label for="management_department"></label>
+                            <span class="helper-text">Department</span>
+                        </div>
+                    </div>
+                    <!-- submit button -->
+                    <div class="row">
+                        <div class="col s6">
+                            <button class="btn btn-large orange darken-2 button-form" type="submit" name="action">Edit
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s6 ">
+                            <a class="btn btn-large orange darken-2 button-form" href="{{ url_for('get_departments') }}"
+                                name="action">Back
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

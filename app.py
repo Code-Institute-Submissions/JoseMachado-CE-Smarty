@@ -200,6 +200,47 @@ def get_departments():
     return render_template("departments.html", departments=departments)
 
 
+@app.route("/add_departments", methods=["GET", "POST"])
+def add_departments():
+    """
+    This function allows the Admin of the website to add 
+    departments into the website system.
+    """
+    if request.method == 'POST':
+        management = {
+            "management_department": request.form.get("management_department")
+        }
+        mongo.db.management.insert_one(management)
+        return redirect(url_for("get_departments"))
+
+    return render_template("add_departments.html")
+
+
+@app.route("/edit_departments/<department_id>", methods=["GET", "POST"])
+def edit_departments(department_id):
+    """
+    This function allows the admin to edit a department.
+    """
+    if request.method == "POST":
+        submit = {
+            "management_department": request.form.get("management_department")
+        }
+        mongo.db.management.update({"_id": ObjectId(department_id)}, submit)
+        return redirect(url_for("get_departments"))
+    department = mongo.db.management.find_one({"_id": ObjectId(department_id)})
+    return render_template("edit_department.html", department=department)
+
+
+@app.route("/delete_department/<department_id>")
+def delete_department(department_id):
+    """
+    This function allows the admin to delete a department.
+    """
+    mongo.db.management.remove({"_id": ObjectId(department_id)})
+    flash("Department removed", "danger")
+    return redirect(url_for("get_departments"))
+
+
 @app.route("/jobs")
 def jobs():
     """
@@ -217,21 +258,6 @@ def job(job_id):
     job = mongo.db.jobs.find_one({"_id": ObjectId(job_id)})
     return render_template("job.html", job=job)
 
-
-@app.route("/add_departments", methods=["GET", "POST"])
-def add_departments():
-    """
-    This function allows the Admin of the website to add 
-    departments into the website system.
-    """
-    if request.method == 'POST':
-        management = {
-            "management_department": request.form.get("management_department")
-        }
-        mongo.db.management.insert_one(management)
-        return redirect(url_for("employees"))
-
-    return render_template("add_departments.html")
 
 
 @app.route("/search", methods=["POST", "GET"])

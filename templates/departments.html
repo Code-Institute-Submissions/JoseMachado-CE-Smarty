@@ -23,8 +23,8 @@
                             </p>
                         </div>
                         <div class="card-action">
-                            <a class="orange-text button-dpt" href="#">Edit</a>
-                            <a class="orange-text button-dpt" href="#">Delete</a>
+                            <a class="orange-text button-dpt" href="{{ url_for('edit_departments', department_id=department._id) }}">Edit</a>
+                            <a class="orange-text button-dpt" href="{{ url_for('delete_department', department_id=department._id) }}">Delete</a>
                         </div>
                     </div>
                 </div>
