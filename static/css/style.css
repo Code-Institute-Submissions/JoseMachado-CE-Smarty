@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/*-- Body -- */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/*-- Navbar -- */
 .brand-logo {
     margin-left: 5%;
 }
@@ -7,23 +20,20 @@
     text-transform: uppercase;
 }
 
-#jobs-text {
-    font-weight: 800;
-}
-
 .logo-sidenav {
     letter-spacing: 2px;
 }
 
+/*-- Home page -- */
 #bg-home {
     width: 100%;
 }
-
 
 .aboutsmarty {
     text-transform: uppercase;
 }
 
+/*-- Buttons -- */
 .btn-signup-login {
     width: 20%;
     margin-left: 5%;
@@ -32,6 +42,16 @@
     background-color: #f57c00;
 }
 
+.buttons-search {
+    margin-left: 10px;
+}
+
+/*-- Job Page -- */
+#jobs-text {
+    font-weight: 800;
+}
+
+/*-- Orange border frames -- */
 
 .contact {
     display: block;
@@ -46,16 +66,14 @@
     color: #f57c00;
 }
 
-.buttons-search {
-    margin-left: 10px;
+.border-form {
+    border: solid 2px orange;
+    padding: 4px;
+    margin-bottom: 10%;
 }
 
-.danger {
-    background-color: red;
-}
-
-.logout-flash {
-    background-color: rgb(233, 206, 156);
+.box-departments {
+    border: 3px solid orange;
 }
 
 .italic-reg-sign {
@@ -63,37 +81,21 @@
     color: #f57c00;
 }
 
-.border-form {
-    border: solid 2px orange;
-    padding: 4px;
-    margin-bottom: 10%;
+/*-- Flash Alert -- */
+
+.danger {
+    background-color: #123123;
+}
+
+.logout-flash {
+    background-color: rgb(233, 206, 156);
 }
 
 .documents-title {
     margin-bottom: 5%;
 }
 
-.box-departments {
-    border: 3px solid orange;
-}
-
-
-.tilte-employee {
-    margin-left: 15px;
-}
-
-.employee-main-title {
-    border: 10px solid #f57c00;
-}
-
-#employee-title {
-    text-transform: uppercase;
-}
-
-.add_department {
-    margin-top: 20px;
-}
-
+/*-- Card -- */
 .card {
     background: grey;
     border-radius: 10px;
@@ -101,17 +103,6 @@
     overflow: hidden;
     box-shadow: 0 70px 63px -60px #000000;
 }
-
-#boxes-jobs {
-    margin-top: 20px;
-}
-
-#boxes-jobs:hover {
-    background-color: #f57c00;
-    text-emphasis-color: white;
-    border-radius: 10px;
-}
-
 
 .card-images {
     max-height: 220px;
@@ -134,42 +125,16 @@
     font-weight: 700;
 }
 
-.profile-info {
-    margin-top: 8px;
+/*-- Box Departments -- */
+#boxes-jobs {
+    margin-top: 20px;
 }
 
-.profile-info-text-area {
-    margin-top: 8px;
-
+#boxes-jobs:hover {
+    background-color: #f57c00;
+    text-emphasis-color: white;
+    border-radius: 10px;
 }
-
-.right-align {
-    display: flex;
-    justify-content: flex-end;
-    letter-spacing: 10px;
-}
-
-ul .right-align li {
-    margin-bottom: 30px;
-}
-
-.panel-footer {
-    align-items: center;
-
-
-}
-
-.parallax {
-    background-image: url('/static/images/dollar.jpeg');
-    background-repeat: no-repeat;   
-    background-size: cover;
-    margin-bottom: 20px;
-}
-
-.text-uppercase {
-    text-transform: uppercase;
-}
-
 
 .box {
     width: 450px;
@@ -182,10 +147,6 @@ ul .right-align li {
     font-family:'sans-serif';
 }
 
-.text-profile {
-    overflow-wrap: break-word;
-}
-
 .box-img {
     border-radius: 50%;
     width: 200px;
@@ -196,37 +157,6 @@ ul .right-align li {
     font-size: 40px;
     letter-spacing: 4px;
     font-weight: 100;
-}
-
-#text-description-job {
-    text-overflow: initial;
-}
-
-.box h5 {
-    font-size: 20px;
-    letter-spacing: 3px;
-    font-weight: 100;
-}
-
-#text-description-job {
-    font-size: 12px;
-    margin-bottom: 10px;
-    margin-top: 0;
-}
-
-.text-uppercase {
-    font-size: 35px;
-    margin-bottom: 0;
-    margin-top: 0;
-}
-
-.box p {
-    text-align: justify;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
 }
 
 .box li {
@@ -244,9 +174,99 @@ ul {
     color: orange;
 }
 
+.box h5 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: 100;
+}
+
+.box p {
+    text-align: justify;
+}
+
+/*-- Employees Page -- */
+
+.tilte-employee {
+    margin-left: 15px;
+}
+
+.employee-main-title {
+    border: 10px solid #f57c00;
+}
+
+#employee-title {
+    text-transform: uppercase;
+}
+
+
+/*-- Departments Page -- */
+.add_department {
+    margin-top: 20px;
+}
+
+#text-description-job {
+    text-overflow: initial;
+}
+
+
+#text-description-job {
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+/*-- Profile -- */
+
+.profile-info {
+    margin-top: 8px;
+}
+
+.profile-info-text-area {
+    margin-top: 8px;
+}
+
+.text-profile {
+    overflow-wrap: break-word;
+}
+
+.right-align {
+    display: flex;
+    justify-content: flex-end;
+    letter-spacing: 10px;
+}
+
+ul .right-align li {
+    margin-bottom: 30px;
+}
+
+.parallax {
+    background-image: url('/static/images/dollar.jpeg');
+    background-repeat: no-repeat;   
+    background-size: cover;
+    margin-bottom: 20px;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-uppercase {
+    font-size: 35px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+/*-- Footer -- */
+
 footer{
     margin-top: 20px;
 }
+
+.panel-footer {
+    align-items: center;
+}
+
+/*-- Media Query -- */
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
     .contact {
