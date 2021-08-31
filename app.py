@@ -271,6 +271,11 @@ def search():
     return render_template("employees.html", employees=employees)
 
 
+@app.errorhandler(404)
+def not_found_error(error):
+    return render_template('404.html', error=error), 404
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

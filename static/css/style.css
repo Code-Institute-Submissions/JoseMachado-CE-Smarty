@@ -126,6 +126,11 @@ ul {
 }
 
 /*-- Box Departments -- */
+
+.image-404 {
+    max-width: 100%;
+}
+
 #boxes-jobs {
     margin-top: 20px;
 }
