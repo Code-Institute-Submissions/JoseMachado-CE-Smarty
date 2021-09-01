@@ -1,6 +1,6 @@
 # [SMARTY](https://smarty-jose.herokuapp.com/)
 
-![SMARTY Mock up image](/static/images/smartyMockUp.PNG)
+![SMARTY Mock up image](static/images/smartyMockUp.PNG)
 This website app has been created with the purpose of giving any person the option of managing people. It's a basic app but it can't help any person who wants to have a better system.
 
 ---
@@ -88,9 +88,9 @@ This website app has been created with the purpose of giving any person the opti
 
 I have decided to use [Balsamiq Wireframes](https://balsamig.com) to create 3 different wireframes for my website.
 
-### [Desktop Wireframe](wireframes/csdesktop.png)
-### [Tablet Wireframe](wireframes/ipad_wireframe.png)
-### [Phone Wireframe](wireframes/phone_wireframe.png)
+### [Desktop Wireframe](static/wireframes/Desktop_smarty.png)
+### [Tablet Wireframe](static/wireframes/Ipad_smarty.png)
+### [Phone Wireframe](static/wireframes/Mobile_smarty.png)
 
 
 The wireframes really helped me to give me a perpespective on how the wesbite would be made out at the end. 
