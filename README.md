@@ -74,12 +74,14 @@ This website app has been created with the purpose of giving any person the opti
   * Colors have been picked up from [Color Hunt](https://https://colorhunt.co/).
   * I also used the website [Coloors](https://coolors.co/) for make the colors pallet.
 
-  ![Color Scheme](assets/images/palette.png)
-  * #f57c00 - Main ton of orange 
-  * #fff - White used for main text
-  * rgb(233, 206, 156) - Flash when user logs out
-  * rgb(233, 206, 156) - border form
-  * rgba(1, 0, 3, 0.4) - Ton of black of box on home page
+  ![Color Scheme](static/images/SMARTY_colors.png)
+  * #f57c00 - Main ton of orange.
+  * #fff - White used for main text.
+  * rgb(233, 206, 156) - Flash when user logs out.
+  * #FFBA63 - border form.
+  * rgba(1, 0, 3, 0.4) - Ton of black of box on home page.
+  * #FF0000 - Danger flash color.
+  * #808080 - Body background color.
 
 #### Structure
   * For the website structure I have been used [Materialize](https://materializecss.com/).
@@ -173,6 +175,7 @@ These validators below were used in order to check the projects against syntax e
 
 * [W3C HTML Validator](https://validator.w3.org/)
 * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+
 * [JSHint](https://jshint.com/)
 * [PEP8](https://www.python.org/dev/peps/pep-0008/)
 
@@ -229,6 +232,77 @@ A user has the option to find an employee that has been added to Smarty system. 
 A user when wants to log out of the website they can click on the "Log out" button on the navbar and then the page goes to the login page.
 
 ![Log out](/static/images/Log_out.PNG)
+
+
+## Deployment
+
+### Local Deployment
+
+This website was built on top of Code Institue github template. The whole project has been made using gitpod and it has been saved using "git commit -m " with "git push" after that.
+The project has been deployed on Heroku.
+
+### To clone the project
+
+- On the github profile repository page, you can clone the repository using the line below.
+
+
+    ``` 
+    git clone https://github.com/JoseMachado-CE/Smarty.git
+    ``` 
+
+- You can install the web app requirements .Access the folder in your terminal window and install the application's [Requirements](https://github.com/JoseMachado-CE/Smarty/blob/main/requirements.txt). You can also have access to this typing line below.
+
+    ```
+    pip3 install -r requirements.txt
+    ```
+
+- After that you can go to [MongoDB](https://mongodb.com) and you can log in you register if you are a new user. After loggin yourself to mongodb website you can create a cluster.
+After creating a cluster. After creating the cluster you can click on brownser collection and create a database. You can create a database. Within this database you can create a collections called "employees","jobs", "management" and "users".
+
+- Within your IDE you can create your environmental variables called env.py.
+
+```
+import os
+
+os.environ.setdefault("IP", "0.0.0.0")
+os.environ.setdefault("PORT", "5000")
+os.environ.setdefault("SECRET_KEY")
+os.environ.setdefault("MONGO_URI")
+os.environ.setdefault("MONGO_DBNAME")
+os.environ.setdefault('DBUG','1')
+```
+- It's important to note that you need to change each of these environmental variables of you your owns ones.
+
+- To run the app you can type the below.
+
+```
+python3 app.py
+```
+
+### Deploying your project on Heroku 
+
+- Login or register to [Heroku](https://dashboard.heroku.com/)
+- Make sure that your Procfile and req.txt are up to date on your repository.  
+    Requirements:
+    ```
+    pip3 freeze --local > requirements.txt
+    ```
+    Procfile:
+    ```
+    echo web: python app.py > Procfile
+    ```
+- The Procfile should contain the following line:
+    ```
+    web: python app.
+
+    ```
+
+After this you can deploy your project on Heroku chosing GitHub for automatic deployment.
+
+
+
+
+
 
 
 
