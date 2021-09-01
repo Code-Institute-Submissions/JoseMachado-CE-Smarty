@@ -2,14 +2,17 @@
 {% block content %}
 <div class="container">
     <div class="">
-        <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--_GqDpWw0--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/7aqcppklh6bexoa70320.jpg" alt="" class="image-404"> 
+        <img src="/static/images/404error.gif" alt="404 Error Gif" class="image-404"> 
     </div>
-    <button type="submit" class="col s12 btn-large orange darken-2 text-shadow">
+    <h1 class="white-text title-main hide-on-small-only">Page not found !!</h1>
+    <a type="submit" href="{{ url_for('home') }}" class="col s12 btn-large orange darken-2 text-shadow">
         Get Back Home
-    </button>
+    </a>
 </div>
 {% endblock %}
 
 {% block alert %}
-
+<script>
+    swal("Page not found!");
+  </script>
 {% endblock %}
