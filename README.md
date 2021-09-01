@@ -1,6 +1,6 @@
 # [SMARTY](https://smarty-jose.herokuapp.com/)
 
-![SMARTY Mock up image](/assets/images/smartyMockUp.PNG)
+![SMARTY Mock up image](/static/images/smartyMockUp.PNG)
 This website app has been created with the purpose of giving any person the option of managing people. It's a basic app but it can't help any person who wants to have a better system.
 
 ---
