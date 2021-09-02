@@ -295,6 +295,10 @@ python3 app.py
 
 After this you can deploy your project on Heroku chosing GitHub for automatic deployment.
 
+- If anyone wants to log into the website as the admin. You can have access to the web app with:
+Username: admin
+Password: 123456
+
 ## Credits
 
 I wanted to thank again my tutor https://github.com/eventyret, for giving me all the support needed to finish the website. I wanted to thank also Code Institute and Slack for all support. And God for make this all achieveable.
