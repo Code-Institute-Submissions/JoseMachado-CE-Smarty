@@ -287,17 +287,17 @@ python3 app.py
     ```
     pip3 freeze --local > requirements.txt
     ```
-    Procfile:
-    ```
-    echo web: python app.py > Procfile
-    ```
+    
 - The Procfile should contain the following line:
     ```
-    web: python app.
-
+    web: python app.py
     ```
 
 After this you can deploy your project on Heroku chosing GitHub for automatic deployment.
+
+## Credits
+
+I wanted to thank again my tutor https://github.com/eventyret, for giving me all the support needed to finish the website. I wanted to thank also Code Institute and Slack for all support. And God for make this all achieveable.
 
 
 
