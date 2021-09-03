@@ -230,7 +230,7 @@ The website showed that it needs the username and password and they need to matc
 
 In case the existing does not provid correct the either username or password. A red card will pop up on the screen warning the user.
 
-It's important to note that the flash mensage color has changed to a different color.
+It's important to note that the flash message color has changed to a different color.
 
 ![Error](/static/images/error.PNG)
 
