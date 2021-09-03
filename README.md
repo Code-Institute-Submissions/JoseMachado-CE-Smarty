@@ -74,7 +74,7 @@ This website app has been created with the purpose of giving any person the opti
   * Colors have been picked up from [Color Hunt](https://https://colorhunt.co/).
   * I also used the website [Coloors](https://coolors.co/) for make the colors pallet.
 
-  ![Color Scheme](static/images/smarty_colors21.png)
+  ![Color Scheme](static/images/smarty_colors1.png)
   * #f57c00 - Main ton of orange.
   * #fff - White used for main text.
   * #b39ddb - Flash messages.
