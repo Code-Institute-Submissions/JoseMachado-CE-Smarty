@@ -46,6 +46,12 @@ ul {
     background-color: #f57c00;
 }
 
+.button-job-mobile {
+    border: 1px solid #fff;
+    width: 100%;
+    
+}
+
 .buttons-search {
     margin-left: 10px;
 }
