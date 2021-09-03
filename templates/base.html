@@ -19,9 +19,9 @@
 <body class="grey darken-3 profile-back">
     <header>
         <!-- Main Navbar -->
-        <nav class="nav-extended orange darken-2">
+        <nav class="nav-extended orange text-uppercase darken-2">
             <div class="nav-wrapper">
-                <a href="{{ url_for('employees') }}" class="brand-logo">SMARTY</a>
+                <a href="{{ url_for('home') }}" class="brand-logo">SMARTY</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('home') }}">Home</a></li>
@@ -76,9 +76,9 @@
                 <div class="row">
                     <div class="col s12 m6">
                         <div class="card {{ category }}">
-                            <div class="card-content white-text red">
+                            <div class="card-content white-text deep-purple lighten-3">
                                 <span class="card-title ">Attention:</span>
-                                <p> {{ message }}</p>
+                                <p class="white-text"> {{ message }}</p>
                             </div>
                         </div>
                     </div>
@@ -114,10 +114,10 @@
                 <div class="col l4 offset-l2 s12">
                     <h5 class="white-text">Links</h5>
                     <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!"><i class="fab fa-facebook"></i> Facebook</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!"><i class="fab fa-instagram"></i> Instagram</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!"><i class="fab fa-twitter"></i> Twitter</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!"><i class="fab fa-youtube"></i> Youtube</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://fb.com/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://instagram.com/"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://twitter.com/"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://youtube.com/"><i class="fab fa-youtube"></i> Youtube</a></li>
                     </ul>
                 </div>
             </div>
@@ -125,7 +125,6 @@
         <div class="footer-copyright orange darken-2">
             <div class="container">
                 © 2021 Jose Machado CE
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
         </div>
     </footer>

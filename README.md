@@ -74,13 +74,13 @@ This website app has been created with the purpose of giving any person the opti
   * Colors have been picked up from [Color Hunt](https://https://colorhunt.co/).
   * I also used the website [Coloors](https://coolors.co/) for make the colors pallet.
 
-  ![Color Scheme](static/images/SMARTY_colors.png)
+  ![Color Scheme](static/images/smarty_colors.png)
   * #f57c00 - Main ton of orange.
   * #fff - White used for main text.
-  * rgb(233, 206, 156) - Flash when user logs out.
+  * #b39ddb - Flash messages.
   * #FFBA63 - border form.
   * rgba(1, 0, 3, 0.4) - Ton of black of box on home page.
-  * #FF0000 - Danger flash color.
+  * #FF0000 - Delete buttons.
   * #808080 - Body background color.
 
 #### **Structure**

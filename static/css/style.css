@@ -20,6 +20,10 @@ ul {
     text-transform: uppercase;
 }
 
+.nav-wrapper {
+    font-weight: bold;
+}
+
 .logo-sidenav {
     letter-spacing: 2px;
 }
