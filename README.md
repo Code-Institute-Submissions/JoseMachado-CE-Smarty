@@ -82,6 +82,7 @@ This website app has been created with the purpose of giving any person the opti
   * rgba(1, 0, 3, 0.4) - Ton of black of box on home page.
   * #FF0000 - Delete buttons.
   * #808080 - Body background color.
+  * #964B00 - Edit button color.
 
 #### **Structure**
   * For the website structure I have been used [Materialize](https://materializecss.com/).
