@@ -1,7 +1,7 @@
 # **[SMARTY](https://smarty-jose.herokuapp.com/)**
 
 ![SMARTY Mock up image](static/images/smartyMockUp.PNG)
-This website app has been created with the purpose of giving any person the option of managing people. It's a basic app but it can't help any person who wants to have a better system.
+This website app has been created with the purpose of giving any person the option of managing people. It's a basic app but it can help any person who wants to have a better employee management system.
 
 ---
 ## **Table of Contents**
@@ -129,7 +129,7 @@ This page will show the user's profile.
 #### **New Employee**
 This page is the page designed to add the employees to their designated departments.
 
-#### **Departments **
+#### **Departments**
 This page will only be shown to the admin.
 
 ## **Technologies used**
