@@ -194,7 +194,7 @@ A brief explanation about the website in regards to what the website is about.
 A user only needs to click on the "Sign up" button on navbar.
 #### Test:
 Try to register without with one of the register requirements missing. (Exception of media)
-#### Solution:
+#### Result:
 The website showed that it needs the three first requirements filled out.
 
 ![Register](/static/images/register.PNG)
@@ -205,21 +205,26 @@ If a user wants to look at a few job markets for curiosity. There is a page that
 Make the size of the screen big and small enough to see whether the job market banners would change size or shape.
 #### Error:
 The website showed that the banner would change the their sizes once the screen was too big.
-#### Solution:
+#### Result:
 It was removed a "a" anchor tag that was withing the same div of the image. The anchor tag was placed right below the image div and then it made the banners dont get their shapes changed.
 
 ![Job Market](/static/images/job_market.PNG)
 
 #### **Access to the website on mobile and desktop**
 Any user should be able to access the website from mobile and it still be have a nice experience surfing on the website. The website should be responsive and it can not brake.
-
-On this page it was noticed that the job markets banners would get in different sizes when the screen was too big. 
-The
+#### Test:
+ Making screen in different sizes.
+#### Result:
+ The page would not brake after the different screen sizes.
 
 ![Mobile](/static/images/phone.PNG)
 
 #### **Access to log in to the website**
 Any existing user who can provide the right username and password can have access to the website.
+#### Test:
+Try to register without with one of the register requirements missing. 
+#### Result:
+The website showed that it needs the username and password and they need to match what is stored in the smarty auth system.
 
 ![Log In](/static/images/login.PNG)
 
@@ -229,11 +234,19 @@ In case the existing does not provid correct the either username or password. A 
 
 #### **Profile Page**
 After the user can provide the correct info to log in to the website. A profile page will be shown on the screen.
+#### Test:
+See whether the users username would show up on the profile page.
+#### Result:
+It showed that the website works and the username shows on the profile page.
 
 ![Profile](/static/images/profile_.PNG)
 
 #### **A user can add employees to the website**
 Any user can add employee to the Smarty system.
+#### Test:
+See whether the users username could be able to add an employee to the webapp.
+#### Result:
+It showed that the user could very well add an employee to the web app once the user is logged in.
 
 ![Add Employee](/static/images/addemployees.PNG)
 
@@ -243,11 +256,19 @@ There is another tab as well to insert employees documents. This tab is a future
 
 #### **Find employee by name or department**
 A user has the option to find an employee that has been added to Smarty system. It can be done by the employee's name or department.
+#### Test:
+See whether the users username could be search for an employee by their name or their department.
+#### Result:
+It showed that the user could very well search for an employee looking for either their name or department.
 
 ![Find Employee](/static/images/findemployee.PNG)
 
 #### **Log out**
 A user when wants to log out of the website they can click on the "Log out" button on the navbar and then the page goes to the login page.
+#### Test:
+See whether the users could log out of the website after cliking the log out button on the navbar.
+#### Result:
+It showed that the user could very well log themselves out of the website after clicking the log out button and then website goes to the login page after that.
 
 ![Log out](/static/images/Log_out.PNG)
 
