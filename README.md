@@ -33,8 +33,8 @@ This website app has been created with the purpose of giving any person the opti
 ## **User Experience**
 ### **User Goals**
   * A website with good and up to date content.
-  * A website that manages to display well all colors on the screen. 
-  * A good and well formated contact form on the website.
+  * A website that manages to display well all colours on the screen.
+  * A good and well formatted contact form on the website.
   * List of employees 
 
 ### **User Stories**
@@ -42,7 +42,7 @@ This website app has been created with the purpose of giving any person the opti
   * A user wants to easily edit or delete the details of any employee.
   * A user wants to quickly find what they are looking for.
   * A user wants to login and sign up easily.
-  * A user wants to navigate smooth on the webiste displayed on tablets and cellphones.
+  * A user wants to navigate smooth on the website displayed on tablets and cell phones.
   * A user wants to find different social medias associated to the website.
 
 ### **Site Owners Goals**
@@ -54,13 +54,13 @@ This website app has been created with the purpose of giving any person the opti
 #### **Requirements**
   * Easy to navigate.
   * Appropriate Content about the service.
-  * Good color contrast.
+  * Good colour contrast.
   * Accurate employee details.
 
 #### **Expectations**
   * Proper information about locations.
   * Relevant social medias.
-  * Links that dont brake.
+  * Links that don't brake.
   * Quick return from website owner.
 
 ### **Design Choices**
@@ -70,19 +70,19 @@ This website app has been created with the purpose of giving any person the opti
   #### **Icons**
   * Icons have been picked from [Font Awesome](https://fontawesome.com/).
 
-#### **Colors**
-  * Colors have been picked up from [Color Hunt](https://https://colorhunt.co/).
-  * I also used the website [Coloors](https://coolors.co/) for make the colors pallet.
+#### **Colours**
+  * Colours have been picked up from [Color Hunt](https://https://colorhunt.co/).
+  * I also used the website [Coloors](https://coolors.co/) for make the colours pallet.
 
-  ![Color Scheme](static/images/smarty_color_2021.png)
+  ![Colour Scheme](static/images/smarty_color_2021.png)
   * #f57c00 - Main ton of orange.
   * #fff - White used for main text.
   * #b39ddb - Flash messages.
   * #FFBA63 - border form.
   * rgba(1, 0, 3, 0.4) - Ton of black of box on home page.
   * #FF0000 - Delete buttons.
-  * #808080 - Body background color.
-  * #964B00 - Edit button color.
+  * #808080 - Body background colour.
+  * #964B00 - Edit button colour.
 
 #### **Structure**
   * For the website structure I have been used [Materialize](https://materializecss.com/).
@@ -96,26 +96,27 @@ I have decided to use [Balsamiq Wireframes](https://balsamig.com) to create 3 di
 ### [Phone Wireframe](static/wireframes/Mobile_smarty.png)
 
 
-The wireframes really helped me to give me a perpespective on how the wesbite would be made out at the end. 
+The wireframes really helped me to give me a perspective on how the website would be made out at the end. 
+ 
 
 ## **Features**
 ### **1. Existing Features**
 #### **Navigation**
-The navigation bag that I hava come up with for the website is a basic navbar which comes from materializecss. It has the logo of the website on top left corner.
+The navigation bag that I have come up with for the website is a basic navbar which comes from materialize css. It has the logo of the website on top left corner.
 When the page is opened for the first time you will only have 3 buttons on the navbar which are home, sign in and sign up buttons.
 And then once the user is logged in you will only have 5 buttons which are home, find employee, profile, new employee and log out.
 
 #### **Home**
-This page which is the main and first page when user firstly enters the website. On this page the user will see a big picture along with a setence/title within this big picture. Below this picure there are 2 sections which are the about section and the section that tries to explain a little bit what the app is about and then below these 2 sections there is the footer.
+This page which is the main and first page when user firstly enters the website. On this page the user will see a big picture along with a setence/title within this big picture. Below this picture there are 2 sections which are the about section and the section that tries to explain a little bit what the app is about and then below these 2 sections there is the footer.
 
 #### **Log In**
 The sign in page is the page which the user can log in themselves.
 
 #### **Sign up** 
-The sign up page is the page which the user can register themselves for the first time.
+The sign-up page is the page which the user can register themselves for the first time.
 
 #### **Log out**
-The log out page is the page which the user can log themselves out of the page. Which it takes straigt away to the login page.
+The log out page is the page which the user can log themselves out of the page. Which it takes straight away to the login page.
 
 #### **Find Employee**
 This page will show you all the employees.
@@ -138,7 +139,7 @@ This page will only be shown to the admin.
 * [HTML5](https://en.wikipedia.org/wiki/HTML5) - used to create the HTML base.
 * [CSS](https://en.wikipedia.org/wiki/CSS) - used to give style to the HTML5 elements.
 * [JavasCript(JQuery)](https://en.wikipedia.org/wiki/JavaScript) - used to 
-incorporate behaviors to the website.
+incorporate behaviours to the website.
 * [Python](https://www.python.org/) - used to create the back-end of the website.
 
 ### **Libraries and Frameworks**
@@ -148,7 +149,7 @@ incorporate behaviors to the website.
 
 ### **Tools**
 * [Gitpod](https://www.gitpod.io/) - I used gitpod for better tracebility.
-* [Github](https://github.com/) - I used github for creating my repository
+* [Github](https://github.com/) - I used GitHub for creating my repository
 * [Git](https://git-scm.com/) - I used git as version control for better record of my coding.
 * [Balsamic](https://balsamiq.com/wireframes/) - I Used it to create the Wireframes
 * [Ami Mockup Image](http://ami.responsivedesign.is/) - I used it to create the mockup image with the website displayed in 4 different device frames.
@@ -181,9 +182,9 @@ These validators below were used in order to check the projects against syntax e
 * [JSHint](https://jshint.com/)
 * [PEP8](https://www.python.org/dev/peps/pep-0008/)
 
-### **Test User Storie**
+### **Test User Stories**
 #### **First look from user**
-A brief explanation about the website in regards to what the website is about.
+A brief explanation about the website in regard to what the website is about.
 #### Test:
  Making screen in different sizes.
 #### Result:
@@ -201,18 +202,18 @@ The website showed that it needs the three first requirements filled out.
 ![Register](/static/images/register.PNG)
 
 #### **User able to look at a few job markets**
-If a user wants to look at a few job markets for curiosity. There is a page that was buit including 4 job markets.
+If a user wants to look at a few job markets for curiosity. There is a page that was built including 4 job markets.
 #### Test:
 Make the size of the screen big and small enough to see whether the job market banners would change size or shape.
 #### Error:
-The website showed that the banner would change the their sizes once the screen was too big.
+The website showed that the banner would change their sizes once the screen was too big.
 #### Result:
-It was removed a "a" anchor tag that was withing the same div of the image. The anchor tag was placed right below the image div and then it made the banners dont get their shapes changed.
+It was removed a "a" anchor tag that was withing the same div of the image. The anchor tag was placed right below the image div and then it made the banners don't get their shapes changed.
 
 ![Job Market](/static/images/job_market.PNG)
 
 #### **Access to the website on mobile and desktop**
-Any user should be able to access the website from mobile and it still be have a nice experience surfing on the website. The website should be responsive and it can not brake.
+Any user should be able to access the website from mobile and it still have a nice experience surfing on the website. The website should be responsive, and it cannot brake.
 #### Test:
  Making screen in different sizes.
 #### Result:
@@ -225,42 +226,43 @@ Any existing user who can provide the right username and password can have acces
 #### Test:
 Try to register without with one of the register requirements missing. 
 #### Result:
-The website showed that it needs the username and password and they need to match what is stored in the smarty auth system.
+The website showed that it needs the username and password, and they need to match what is stored in the smarty auth system.
 
 ![Log In](/static/images/login.PNG)
 
-In case the existing does not provid correct the either username or password. A red card will pop up on the screen warning the user.
+In case the existing does not provide correct the either username or password. A red card will pop up on the screen warning the user.
 
-It's important to note that the flash message color has changed to a different color.
+It's important to note that the flash message colour has changed to a different colour.
 
 ![Error](/static/images/error.PNG)
 
 #### **Profile Page**
 After the user can provide the correct info to log in to the website. A profile page will be shown on the screen.
 #### Test:
-See whether the users username would show up on the profile page.
+See whether the user’s username would show up on the profile page.
 #### Result:
-It showed that the website works and the username shows on the profile page.
+It showed that the website works, and the username shows on the profile page.
+
 
 ![Profile](/static/images/profile_.PNG)
 
 #### **A user can add employees to the website**
 Any user can add employee to the Smarty system.
 #### Test:
-See whether the users username could be able to add an employee to the webapp.
+See whether the user's username could be able to add an employee to the webapp.
 #### Result:
 It showed that the user could very well add an employee to the web app once the user is logged in.
 
 ![Add Employee](/static/images/addemployees.PNG)
 
-There is another tab as well to insert employees documents. This tab is a future feature to be worked on.
+There is another tab as well to insert employees' documents. This tab is a future feature to be worked on.
 
 ![Add Document](/static/images/adddocuments.PNG)
 
 #### **Find employee by name or department**
 A user has the option to find an employee that has been added to Smarty system. It can be done by the employee's name or department.
 #### Test:
-See whether the users username could be search for an employee by their name or their department.
+See whether the user's username could be search for an employee by their name or their department.
 #### Result:
 It showed that the user could very well search for an employee looking for either their name or department.
 
@@ -269,7 +271,7 @@ It showed that the user could very well search for an employee looking for eithe
 #### **Log out**
 A user when wants to log out of the website they can click on the "Log out" button on the navbar and then the page goes to the login page.
 #### Test:
-See whether the users could log out of the website after cliking the log out button on the navbar.
+See whether the users could log out of the website after clicking the log out button on the navbar.
 #### Result:
 It showed that the user could very well log themselves out of the website after clicking the log out button and then website goes to the login page after that.
 
@@ -280,7 +282,7 @@ It showed that the user could very well log themselves out of the website after 
 
 ### **Local Deployment**
 
-This website was built on top of Code Institue github template. The whole project has been made using gitpod and it has been saved using "git commit -m " with "git push" after that.
+This website was built on top of Code Institute GitHub template. The whole project has been made using gitpod and it has been saved using "git commit -m " with "git push" after that.
 The project has been deployed on Heroku.
 
 ### **To clone the project**
@@ -292,14 +294,15 @@ The project has been deployed on Heroku.
     git clone https://github.com/JoseMachado-CE/Smarty.git
     ``` 
 
-- You can install the web app requirements .Access the folder in your terminal window and install the application's [Requirements](https://github.com/JoseMachado-CE/Smarty/blob/main/requirements.txt). You can also have access to this typing line below.
+- You can install the web app requirements accessing the folder in your terminal window and install the application's [Requirements](https://github.com/JoseMachado-CE/Smarty/blob/main/requirements.txt). You can also have access to this typing line below.
 
     ```
     pip3 install -r requirements.txt
     ```
 
-- After that you can go to [MongoDB](https://mongodb.com) and you can log in you register if you are a new user. After loggin yourself to mongodb website you can create a cluster.
-After creating a cluster. After creating the cluster you can click on brownser collection and create a database. You can create a database. Within this database you can create a collections called "employees","jobs", "management" and "users".
+- After that you can go to [MongoDB](https://mongodb.com) and you can log in you register if you are a new user. After logging yourself to Mongo DB website you can create a cluster.
+After creating a cluster. After creating the cluster, you can click on browser collection and create a database. You can create a database. Within this database you can create a collection called "employees”, “jobs", "management" and "users".
+
 
 - Within your IDE you can create your environmental variables called env.py.
 
@@ -313,9 +316,10 @@ os.environ.setdefault("MONGO_URI")
 os.environ.setdefault("MONGO_DBNAME")
 os.environ.setdefault('DBUG','1')
 ```
-- It's important to note that you need to change each of these environmental variables of you your owns ones.
+- It's important to note that you need to change each of these environmental variables for your own ones.
 
-- To run the app you can type the below.
+- To run the app, you can type the below.
+
 
 ```
 python3 app.py
@@ -335,7 +339,7 @@ python3 app.py
     web: python app.py
     ```
 
-After this you can deploy your project on Heroku chosing GitHub for automatic deployment.
+After this you can deploy your project on Heroku choosing GitHub for automatic deployment.
 
 - If anyone wants to log into the website as the admin. You can have access to the web app with:
 Username: admin
@@ -343,7 +347,7 @@ Password: 123456
 
 ## **Credits**
 
-I wanted to thank again my tutor https://github.com/eventyret, for giving me all the support needed to finish the website. I wanted to thank also Code Institute and Slack for all support. And God for make this all achieveable.
+I wanted to thank again my tutor https://github.com/eventyret, for giving me all the support needed to finish the website. I wanted to thank also Code Institute and Slack for all support. And God for make this all achievable.
 
 
 
