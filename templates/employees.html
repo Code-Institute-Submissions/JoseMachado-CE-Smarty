@@ -7,10 +7,9 @@
     <div class="row">
         <form action="{{ url_for('search') }}" method="POST" class="col s12">
           <div class="row">
-            <div id="input-search" class="input-field col s6 left-align">
+            <div id="input-field" class="input-field col s6 left-align">
               <input id="query" type="text" name="query" class="validate">
-              <label for="query">Search</label> 
-              <span class="hide-on-small-only">for Employee or Department</span>
+              <label for="query">Search <span class="hide-on-small-only">for Employee or Department</span></label>
             </div>
           </div>
           <div class="row buttons-search">

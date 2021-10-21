@@ -142,7 +142,7 @@ def add_employee():
             "management_phone": request.form.get("management_phone"),
             "management_email": request.form.get("management_email"),
             "management_manager": session["user"],
-            "management_media": request.form.get("management_media")
+            
         }
         mongo.db.employees.insert_one(employee)
 
@@ -169,7 +169,6 @@ def edit_employee(employee_id):
             "management_phone": request.form.get("management_phone"),
             "management_email": request.form.get("management_email"),
             "management_manager": session["user"],
-            "management_media": session["management_media"]
         }
         mongo.db.employees.update({"_id": ObjectId(employee_id)}, employee_edit)
         return redirect(url_for("employees"))
@@ -260,25 +259,22 @@ def job(job_id):
 
 
 
-@app.route("/search", methods=["POST", "GET"])
+@app.route("/search", methods=["GET", "POST"])
 def search():
     """
     This function allows the user to look for an employee
     by their name or by their deparment.
     """
-    query = request.form.get("query").lower()
+    query = request.form.get("query")
     employees = list(mongo.db.employees.find({"$text": {"$search": query}}))
     return render_template("employees.html", employees=employees)
+
 
 
 @app.errorhandler(404)
 def not_found_error(error):
     return render_template('404.html', error=error), 404
 
-
-@app.errorhandler(500)
-def internal_error(error):
-    return render_template('500.html', error=error), 500
 
 
 if __name__ == "__main__":
