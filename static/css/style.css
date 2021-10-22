@@ -57,7 +57,7 @@ ul {
 }
 
 /*-- Job Page -- */
-#jobs-text {
+.jobs-text {
     font-weight: 800;
 }
 
@@ -326,7 +326,6 @@ footer{
         width: 100%;
         padding: 10px 0;
         z-index: 999;
-    
     }
 
     header {
