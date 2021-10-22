@@ -277,6 +277,10 @@ def search():
 
 @app.errorhandler(404)
 def not_found_error(error):
+    """
+    This function will allow to have a customized page
+    when there is a 404 error.
+    """
     return render_template('404.html', error=error), 404
 
 
