@@ -8,8 +8,8 @@
         <form action="{{ url_for('search') }}" method="POST" class="col s12">
           <div class="row">
             <div id="input-field" class="input-field col s6 left-align">
-              <input id="query" type="text" name="query" class="validate">
-              <label for="query">Search <span class="hide-on-small-only">for Employee or Department</span></label>
+              <input id="query" type="text" class="white-text" name="query" class="validate">
+              <label for="query"><span class="white-text"> Search for Employee or Department</span></label>
             </div>
           </div>
           <div class="row buttons-search">
@@ -34,7 +34,7 @@
                 </div>
                 <div class="col s9 tilte-employee">
                     <i class="fas fa-address-card white-text"></i>
-                        {{ employee.management_employee }}
+                        <span class="employee-name">{{ employee.management_employee }}</span>
                 </div>
                     
                 

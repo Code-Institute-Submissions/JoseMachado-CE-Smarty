@@ -15,7 +15,7 @@ ul {
     margin-left: 5%;
 }
 
-.sidenav li a {
+.sidenav li a{
     color: #fff;
     text-transform: uppercase;
 }
@@ -61,6 +61,15 @@ ul {
     font-weight: 800;
 }
 
+.job-back {
+    color: #f57c00;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.job-back:hover{
+    border: red;
+}
 /*-- Orange border frames -- */
 
 .contact {
@@ -214,6 +223,12 @@ ul {
     text-transform: uppercase;
 }
 
+.employee-name {
+    font-weight: bolder;
+    color: #fff;
+    text-transform: uppercase;
+    font-family:Arial, Helvetica, sans-serif;
+}
 
 /*-- Departments Page -- */
 .add_department {
