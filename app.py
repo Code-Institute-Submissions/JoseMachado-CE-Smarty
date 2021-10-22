@@ -173,6 +173,7 @@ def edit_employee(employee_id):
         mongo.db.employees.update({"_id": ObjectId(employee_id)}, employee_edit)
         return redirect(url_for("employees"))
     
+    
     employee = mongo.db.employees.find_one({"_id": ObjectId(employee_id)})
     management = mongo.db.management.find().sort("management_department", 1)
     return render_template('edit.html', employee=employee, management=management)
@@ -185,6 +186,8 @@ def delete_employee(employee_id):
     added by them.
     """
     mongo.db.employees.remove({"_id": ObjectId(employee_id)})
+
+    
 
     return redirect(url_for("employees"))
 
@@ -220,6 +223,7 @@ def edit_departments(department_id):
     """
     This function allows the admin to edit a department.
     """
+    
     if request.method == "POST":
         submit = {
             "management_department": request.form.get("management_department")

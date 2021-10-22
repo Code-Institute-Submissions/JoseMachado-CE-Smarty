@@ -275,6 +275,12 @@ ul .right-align li {
     background-repeat: no-repeat;   
     background-size: cover;
     margin-bottom: 20px;
+    
+}
+
+.box-job {
+   
+    flex-wrap: nowrap;
 }
 
 .text-uppercase {
@@ -313,6 +319,29 @@ footer{
         font-size: 5vh;
     }
 
+    nav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding: 10px 0;
+        z-index: 999;
+    
+    }
+
+    header {
+        margin-bottom: 14vh;
+    }
+
+    .parallax {
+        max-height: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .employee-main-title {
+        margin-top: 12vh;
+    }
     #text-description-job {
         font-size: 12px;
         margin-bottom: 3px;
